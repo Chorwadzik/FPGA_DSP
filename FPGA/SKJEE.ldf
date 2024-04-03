@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="SKJEE" device="LFE5U-25F-6BG381I" default_implementation="ACDC_5_20_HLQFP">
+    <Options/>
+    <Implementation title="ACDC_5_20_HLQFP" dir="ACDC_5_20_HLQFP" description="ACDC_5_20_HLQFP" synthesis="lse" default_strategy="Strategy1">
+        <Options VERILOG_DIRECTIVES="TYPE_5_20" def_top="Resonant_grid" top="Resonant_grid"/>
+        <Source name="testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="Clarity/Clarity.sbx" type="sbx" type_short="SBX">
+            <Options/>
+        </Source>
+        <Source name="global.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="miscellanous.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Slice2.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="DSP.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Kalman.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Resonant.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Resonant_grid.v" type="Verilog" type_short="Verilog">
+            <Options top_module="Resonant_grid"/>
+        </Source>
+        <Source name="constraint_ACDC.ldc" type="LSE Design Constraints File" type_short="LDC">
+            <Options/>
+        </Source>
+        <Source name="Mem0.mem" type="Unknown Type" type_short="Unknown">
+            <Options/>
+        </Source>
+        <Source name="Mem1_K.mem" type="Unknown Type" type_short="Unknown">
+            <Options/>
+        </Source>
+        <Source name="Mem1_R.mem" type="Unknown Type" type_short="Unknown">
+            <Options/>
+        </Source>
+        <Source name="Mem1_RG.mem" type="Unknown Type" type_short="Unknown">
+            <Options/>
+        </Source>
+        <Source name="sim/sim.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="SKJEE_5_20_HLQFP_v3_1.lpf" type="Logic Preference" type_short="LPF" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="SKJEE_5_20_HLQFP_v3_2.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="SKJEE1.sty"/>
+</BaliProject>

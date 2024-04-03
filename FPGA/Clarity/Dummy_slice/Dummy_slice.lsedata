@@ -1,0 +1,1765 @@
+<top name = "Dummy_slice"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "CLK0"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 1
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "Dummy_slice">
+
+    <!--
+        Top Level Pins: 293
+    -->
+
+    <pins>
+        <pitem  name = "CLK0"  direction = "in"  />
+        <pitem  name = "CE0"  direction = "in"  />
+        <pitem  name = "RST0"  direction = "in"  />
+        <pitem  name = "AA[17]"  direction = "in"  />
+        <pitem  name = "AA[16]"  direction = "in"  />
+        <pitem  name = "AA[15]"  direction = "in"  />
+        <pitem  name = "AA[14]"  direction = "in"  />
+        <pitem  name = "AA[13]"  direction = "in"  />
+        <pitem  name = "AA[12]"  direction = "in"  />
+        <pitem  name = "AA[11]"  direction = "in"  />
+        <pitem  name = "AA[10]"  direction = "in"  />
+        <pitem  name = "AA[9]"  direction = "in"  />
+        <pitem  name = "AA[8]"  direction = "in"  />
+        <pitem  name = "AA[7]"  direction = "in"  />
+        <pitem  name = "AA[6]"  direction = "in"  />
+        <pitem  name = "AA[5]"  direction = "in"  />
+        <pitem  name = "AA[4]"  direction = "in"  />
+        <pitem  name = "AA[3]"  direction = "in"  />
+        <pitem  name = "AA[2]"  direction = "in"  />
+        <pitem  name = "AA[1]"  direction = "in"  />
+        <pitem  name = "AA[0]"  direction = "in"  />
+        <pitem  name = "AB[17]"  direction = "in"  />
+        <pitem  name = "AB[16]"  direction = "in"  />
+        <pitem  name = "AB[15]"  direction = "in"  />
+        <pitem  name = "AB[14]"  direction = "in"  />
+        <pitem  name = "AB[13]"  direction = "in"  />
+        <pitem  name = "AB[12]"  direction = "in"  />
+        <pitem  name = "AB[11]"  direction = "in"  />
+        <pitem  name = "AB[10]"  direction = "in"  />
+        <pitem  name = "AB[9]"  direction = "in"  />
+        <pitem  name = "AB[8]"  direction = "in"  />
+        <pitem  name = "AB[7]"  direction = "in"  />
+        <pitem  name = "AB[6]"  direction = "in"  />
+        <pitem  name = "AB[5]"  direction = "in"  />
+        <pitem  name = "AB[4]"  direction = "in"  />
+        <pitem  name = "AB[3]"  direction = "in"  />
+        <pitem  name = "AB[2]"  direction = "in"  />
+        <pitem  name = "AB[1]"  direction = "in"  />
+        <pitem  name = "AB[0]"  direction = "in"  />
+        <pitem  name = "BA[17]"  direction = "in"  />
+        <pitem  name = "BA[16]"  direction = "in"  />
+        <pitem  name = "BA[15]"  direction = "in"  />
+        <pitem  name = "BA[14]"  direction = "in"  />
+        <pitem  name = "BA[13]"  direction = "in"  />
+        <pitem  name = "BA[12]"  direction = "in"  />
+        <pitem  name = "BA[11]"  direction = "in"  />
+        <pitem  name = "BA[10]"  direction = "in"  />
+        <pitem  name = "BA[9]"  direction = "in"  />
+        <pitem  name = "BA[8]"  direction = "in"  />
+        <pitem  name = "BA[7]"  direction = "in"  />
+        <pitem  name = "BA[6]"  direction = "in"  />
+        <pitem  name = "BA[5]"  direction = "in"  />
+        <pitem  name = "BA[4]"  direction = "in"  />
+        <pitem  name = "BA[3]"  direction = "in"  />
+        <pitem  name = "BA[2]"  direction = "in"  />
+        <pitem  name = "BA[1]"  direction = "in"  />
+        <pitem  name = "BA[0]"  direction = "in"  />
+        <pitem  name = "BB[17]"  direction = "in"  />
+        <pitem  name = "BB[16]"  direction = "in"  />
+        <pitem  name = "BB[15]"  direction = "in"  />
+        <pitem  name = "BB[14]"  direction = "in"  />
+        <pitem  name = "BB[13]"  direction = "in"  />
+        <pitem  name = "BB[12]"  direction = "in"  />
+        <pitem  name = "BB[11]"  direction = "in"  />
+        <pitem  name = "BB[10]"  direction = "in"  />
+        <pitem  name = "BB[9]"  direction = "in"  />
+        <pitem  name = "BB[8]"  direction = "in"  />
+        <pitem  name = "BB[7]"  direction = "in"  />
+        <pitem  name = "BB[6]"  direction = "in"  />
+        <pitem  name = "BB[5]"  direction = "in"  />
+        <pitem  name = "BB[4]"  direction = "in"  />
+        <pitem  name = "BB[3]"  direction = "in"  />
+        <pitem  name = "BB[2]"  direction = "in"  />
+        <pitem  name = "BB[1]"  direction = "in"  />
+        <pitem  name = "BB[0]"  direction = "in"  />
+        <pitem  name = "C[53]"  direction = "in"  />
+        <pitem  name = "C[52]"  direction = "in"  />
+        <pitem  name = "C[51]"  direction = "in"  />
+        <pitem  name = "C[50]"  direction = "in"  />
+        <pitem  name = "C[49]"  direction = "in"  />
+        <pitem  name = "C[48]"  direction = "in"  />
+        <pitem  name = "C[47]"  direction = "in"  />
+        <pitem  name = "C[46]"  direction = "in"  />
+        <pitem  name = "C[45]"  direction = "in"  />
+        <pitem  name = "C[44]"  direction = "in"  />
+        <pitem  name = "C[43]"  direction = "in"  />
+        <pitem  name = "C[42]"  direction = "in"  />
+        <pitem  name = "C[41]"  direction = "in"  />
+        <pitem  name = "C[40]"  direction = "in"  />
+        <pitem  name = "C[39]"  direction = "in"  />
+        <pitem  name = "C[38]"  direction = "in"  />
+        <pitem  name = "C[37]"  direction = "in"  />
+        <pitem  name = "C[36]"  direction = "in"  />
+        <pitem  name = "C[35]"  direction = "in"  />
+        <pitem  name = "C[34]"  direction = "in"  />
+        <pitem  name = "C[33]"  direction = "in"  />
+        <pitem  name = "C[32]"  direction = "in"  />
+        <pitem  name = "C[31]"  direction = "in"  />
+        <pitem  name = "C[30]"  direction = "in"  />
+        <pitem  name = "C[29]"  direction = "in"  />
+        <pitem  name = "C[28]"  direction = "in"  />
+        <pitem  name = "C[27]"  direction = "in"  />
+        <pitem  name = "C[26]"  direction = "in"  />
+        <pitem  name = "C[25]"  direction = "in"  />
+        <pitem  name = "C[24]"  direction = "in"  />
+        <pitem  name = "C[23]"  direction = "in"  />
+        <pitem  name = "C[22]"  direction = "in"  />
+        <pitem  name = "C[21]"  direction = "in"  />
+        <pitem  name = "C[20]"  direction = "in"  />
+        <pitem  name = "C[19]"  direction = "in"  />
+        <pitem  name = "C[18]"  direction = "in"  />
+        <pitem  name = "C[17]"  direction = "in"  />
+        <pitem  name = "C[16]"  direction = "in"  />
+        <pitem  name = "C[15]"  direction = "in"  />
+        <pitem  name = "C[14]"  direction = "in"  />
+        <pitem  name = "C[13]"  direction = "in"  />
+        <pitem  name = "C[12]"  direction = "in"  />
+        <pitem  name = "C[11]"  direction = "in"  />
+        <pitem  name = "C[10]"  direction = "in"  />
+        <pitem  name = "C[9]"  direction = "in"  />
+        <pitem  name = "C[8]"  direction = "in"  />
+        <pitem  name = "C[7]"  direction = "in"  />
+        <pitem  name = "C[6]"  direction = "in"  />
+        <pitem  name = "C[5]"  direction = "in"  />
+        <pitem  name = "C[4]"  direction = "in"  />
+        <pitem  name = "C[3]"  direction = "in"  />
+        <pitem  name = "C[2]"  direction = "in"  />
+        <pitem  name = "C[1]"  direction = "in"  />
+        <pitem  name = "C[0]"  direction = "in"  />
+        <pitem  name = "AMuxsel[1]"  direction = "in"  />
+        <pitem  name = "AMuxsel[0]"  direction = "in"  />
+        <pitem  name = "BMuxsel[1]"  direction = "in"  />
+        <pitem  name = "BMuxsel[0]"  direction = "in"  />
+        <pitem  name = "CMuxsel[2]"  direction = "in"  />
+        <pitem  name = "CMuxsel[1]"  direction = "in"  />
+        <pitem  name = "CMuxsel[0]"  direction = "in"  />
+        <pitem  name = "Opcode[3]"  direction = "in"  />
+        <pitem  name = "Opcode[2]"  direction = "in"  />
+        <pitem  name = "Opcode[1]"  direction = "in"  />
+        <pitem  name = "Opcode[0]"  direction = "in"  />
+        <pitem  name = "Cin[53]"  direction = "in"  />
+        <pitem  name = "Cin[52]"  direction = "in"  />
+        <pitem  name = "Cin[51]"  direction = "in"  />
+        <pitem  name = "Cin[50]"  direction = "in"  />
+        <pitem  name = "Cin[49]"  direction = "in"  />
+        <pitem  name = "Cin[48]"  direction = "in"  />
+        <pitem  name = "Cin[47]"  direction = "in"  />
+        <pitem  name = "Cin[46]"  direction = "in"  />
+        <pitem  name = "Cin[45]"  direction = "in"  />
+        <pitem  name = "Cin[44]"  direction = "in"  />
+        <pitem  name = "Cin[43]"  direction = "in"  />
+        <pitem  name = "Cin[42]"  direction = "in"  />
+        <pitem  name = "Cin[41]"  direction = "in"  />
+        <pitem  name = "Cin[40]"  direction = "in"  />
+        <pitem  name = "Cin[39]"  direction = "in"  />
+        <pitem  name = "Cin[38]"  direction = "in"  />
+        <pitem  name = "Cin[37]"  direction = "in"  />
+        <pitem  name = "Cin[36]"  direction = "in"  />
+        <pitem  name = "Cin[35]"  direction = "in"  />
+        <pitem  name = "Cin[34]"  direction = "in"  />
+        <pitem  name = "Cin[33]"  direction = "in"  />
+        <pitem  name = "Cin[32]"  direction = "in"  />
+        <pitem  name = "Cin[31]"  direction = "in"  />
+        <pitem  name = "Cin[30]"  direction = "in"  />
+        <pitem  name = "Cin[29]"  direction = "in"  />
+        <pitem  name = "Cin[28]"  direction = "in"  />
+        <pitem  name = "Cin[27]"  direction = "in"  />
+        <pitem  name = "Cin[26]"  direction = "in"  />
+        <pitem  name = "Cin[25]"  direction = "in"  />
+        <pitem  name = "Cin[24]"  direction = "in"  />
+        <pitem  name = "Cin[23]"  direction = "in"  />
+        <pitem  name = "Cin[22]"  direction = "in"  />
+        <pitem  name = "Cin[21]"  direction = "in"  />
+        <pitem  name = "Cin[20]"  direction = "in"  />
+        <pitem  name = "Cin[19]"  direction = "in"  />
+        <pitem  name = "Cin[18]"  direction = "in"  />
+        <pitem  name = "Cin[17]"  direction = "in"  />
+        <pitem  name = "Cin[16]"  direction = "in"  />
+        <pitem  name = "Cin[15]"  direction = "in"  />
+        <pitem  name = "Cin[14]"  direction = "in"  />
+        <pitem  name = "Cin[13]"  direction = "in"  />
+        <pitem  name = "Cin[12]"  direction = "in"  />
+        <pitem  name = "Cin[11]"  direction = "in"  />
+        <pitem  name = "Cin[10]"  direction = "in"  />
+        <pitem  name = "Cin[9]"  direction = "in"  />
+        <pitem  name = "Cin[8]"  direction = "in"  />
+        <pitem  name = "Cin[7]"  direction = "in"  />
+        <pitem  name = "Cin[6]"  direction = "in"  />
+        <pitem  name = "Cin[5]"  direction = "in"  />
+        <pitem  name = "Cin[4]"  direction = "in"  />
+        <pitem  name = "Cin[3]"  direction = "in"  />
+        <pitem  name = "Cin[2]"  direction = "in"  />
+        <pitem  name = "Cin[1]"  direction = "in"  />
+        <pitem  name = "Cin[0]"  direction = "in"  />
+        <pitem  name = "SignCin"  direction = "in"  />
+        <pitem  name = "Result[53]"  direction = "out"  />
+        <pitem  name = "Result[52]"  direction = "out"  />
+        <pitem  name = "Result[51]"  direction = "out"  />
+        <pitem  name = "Result[50]"  direction = "out"  />
+        <pitem  name = "Result[49]"  direction = "out"  />
+        <pitem  name = "Result[48]"  direction = "out"  />
+        <pitem  name = "Result[47]"  direction = "out"  />
+        <pitem  name = "Result[46]"  direction = "out"  />
+        <pitem  name = "Result[45]"  direction = "out"  />
+        <pitem  name = "Result[44]"  direction = "out"  />
+        <pitem  name = "Result[43]"  direction = "out"  />
+        <pitem  name = "Result[42]"  direction = "out"  />
+        <pitem  name = "Result[41]"  direction = "out"  />
+        <pitem  name = "Result[40]"  direction = "out"  />
+        <pitem  name = "Result[39]"  direction = "out"  />
+        <pitem  name = "Result[38]"  direction = "out"  />
+        <pitem  name = "Result[37]"  direction = "out"  />
+        <pitem  name = "Result[36]"  direction = "out"  />
+        <pitem  name = "Result[35]"  direction = "out"  />
+        <pitem  name = "Result[34]"  direction = "out"  />
+        <pitem  name = "Result[33]"  direction = "out"  />
+        <pitem  name = "Result[32]"  direction = "out"  />
+        <pitem  name = "Result[31]"  direction = "out"  />
+        <pitem  name = "Result[30]"  direction = "out"  />
+        <pitem  name = "Result[29]"  direction = "out"  />
+        <pitem  name = "Result[28]"  direction = "out"  />
+        <pitem  name = "Result[27]"  direction = "out"  />
+        <pitem  name = "Result[26]"  direction = "out"  />
+        <pitem  name = "Result[25]"  direction = "out"  />
+        <pitem  name = "Result[24]"  direction = "out"  />
+        <pitem  name = "Result[23]"  direction = "out"  />
+        <pitem  name = "Result[22]"  direction = "out"  />
+        <pitem  name = "Result[21]"  direction = "out"  />
+        <pitem  name = "Result[20]"  direction = "out"  />
+        <pitem  name = "Result[19]"  direction = "out"  />
+        <pitem  name = "Result[18]"  direction = "out"  />
+        <pitem  name = "Result[17]"  direction = "out"  />
+        <pitem  name = "Result[16]"  direction = "out"  />
+        <pitem  name = "Result[15]"  direction = "out"  />
+        <pitem  name = "Result[14]"  direction = "out"  />
+        <pitem  name = "Result[13]"  direction = "out"  />
+        <pitem  name = "Result[12]"  direction = "out"  />
+        <pitem  name = "Result[11]"  direction = "out"  />
+        <pitem  name = "Result[10]"  direction = "out"  />
+        <pitem  name = "Result[9]"  direction = "out"  />
+        <pitem  name = "Result[8]"  direction = "out"  />
+        <pitem  name = "Result[7]"  direction = "out"  />
+        <pitem  name = "Result[6]"  direction = "out"  />
+        <pitem  name = "Result[5]"  direction = "out"  />
+        <pitem  name = "Result[4]"  direction = "out"  />
+        <pitem  name = "Result[3]"  direction = "out"  />
+        <pitem  name = "Result[2]"  direction = "out"  />
+        <pitem  name = "Result[1]"  direction = "out"  />
+        <pitem  name = "Result[0]"  direction = "out"  />
+        <pitem  name = "SignR"  direction = "out"  />
+        <pitem  name = "EQZ"  direction = "out"  />
+        <pitem  name = "EQZM"  direction = "out"  />
+        <pitem  name = "EQOM"  direction = "out"  />
+        <pitem  name = "EQPAT"  direction = "out"  />
+        <pitem  name = "EQPATB"  direction = "out"  />
+        <pitem  name = "OVER"  direction = "out"  />
+        <pitem  name = "UNDER"  direction = "out"  />
+        <pitem  name = "SROA[17]"  direction = "out"  />
+        <pitem  name = "SROA[16]"  direction = "out"  />
+        <pitem  name = "SROA[15]"  direction = "out"  />
+        <pitem  name = "SROA[14]"  direction = "out"  />
+        <pitem  name = "SROA[13]"  direction = "out"  />
+        <pitem  name = "SROA[12]"  direction = "out"  />
+        <pitem  name = "SROA[11]"  direction = "out"  />
+        <pitem  name = "SROA[10]"  direction = "out"  />
+        <pitem  name = "SROA[9]"  direction = "out"  />
+        <pitem  name = "SROA[8]"  direction = "out"  />
+        <pitem  name = "SROA[7]"  direction = "out"  />
+        <pitem  name = "SROA[6]"  direction = "out"  />
+        <pitem  name = "SROA[5]"  direction = "out"  />
+        <pitem  name = "SROA[4]"  direction = "out"  />
+        <pitem  name = "SROA[3]"  direction = "out"  />
+        <pitem  name = "SROA[2]"  direction = "out"  />
+        <pitem  name = "SROA[1]"  direction = "out"  />
+        <pitem  name = "SROA[0]"  direction = "out"  />
+        <pitem  name = "SROB[17]"  direction = "out"  />
+        <pitem  name = "SROB[16]"  direction = "out"  />
+        <pitem  name = "SROB[15]"  direction = "out"  />
+        <pitem  name = "SROB[14]"  direction = "out"  />
+        <pitem  name = "SROB[13]"  direction = "out"  />
+        <pitem  name = "SROB[12]"  direction = "out"  />
+        <pitem  name = "SROB[11]"  direction = "out"  />
+        <pitem  name = "SROB[10]"  direction = "out"  />
+        <pitem  name = "SROB[9]"  direction = "out"  />
+        <pitem  name = "SROB[8]"  direction = "out"  />
+        <pitem  name = "SROB[7]"  direction = "out"  />
+        <pitem  name = "SROB[6]"  direction = "out"  />
+        <pitem  name = "SROB[5]"  direction = "out"  />
+        <pitem  name = "SROB[4]"  direction = "out"  />
+        <pitem  name = "SROB[3]"  direction = "out"  />
+        <pitem  name = "SROB[2]"  direction = "out"  />
+        <pitem  name = "SROB[1]"  direction = "out"  />
+        <pitem  name = "SROB[0]"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 5
+    -->
+
+    <instance  name = "dsp_alu_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A35"  direction = "in"  />
+        <pitem  name = "A34"  direction = "in"  />
+        <pitem  name = "A33"  direction = "in"  />
+        <pitem  name = "A32"  direction = "in"  />
+        <pitem  name = "A31"  direction = "in"  />
+        <pitem  name = "A30"  direction = "in"  />
+        <pitem  name = "A29"  direction = "in"  />
+        <pitem  name = "A28"  direction = "in"  />
+        <pitem  name = "A27"  direction = "in"  />
+        <pitem  name = "A26"  direction = "in"  />
+        <pitem  name = "A25"  direction = "in"  />
+        <pitem  name = "A24"  direction = "in"  />
+        <pitem  name = "A23"  direction = "in"  />
+        <pitem  name = "A22"  direction = "in"  />
+        <pitem  name = "A21"  direction = "in"  />
+        <pitem  name = "A20"  direction = "in"  />
+        <pitem  name = "A19"  direction = "in"  />
+        <pitem  name = "A18"  direction = "in"  />
+        <pitem  name = "A17"  direction = "in"  />
+        <pitem  name = "A16"  direction = "in"  />
+        <pitem  name = "A15"  direction = "in"  />
+        <pitem  name = "A14"  direction = "in"  />
+        <pitem  name = "A13"  direction = "in"  />
+        <pitem  name = "A12"  direction = "in"  />
+        <pitem  name = "A11"  direction = "in"  />
+        <pitem  name = "A10"  direction = "in"  />
+        <pitem  name = "A9"  direction = "in"  />
+        <pitem  name = "A8"  direction = "in"  />
+        <pitem  name = "A7"  direction = "in"  />
+        <pitem  name = "A6"  direction = "in"  />
+        <pitem  name = "A5"  direction = "in"  />
+        <pitem  name = "A4"  direction = "in"  />
+        <pitem  name = "A3"  direction = "in"  />
+        <pitem  name = "A2"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "B35"  direction = "in"  />
+        <pitem  name = "B34"  direction = "in"  />
+        <pitem  name = "B33"  direction = "in"  />
+        <pitem  name = "B32"  direction = "in"  />
+        <pitem  name = "B31"  direction = "in"  />
+        <pitem  name = "B30"  direction = "in"  />
+        <pitem  name = "B29"  direction = "in"  />
+        <pitem  name = "B28"  direction = "in"  />
+        <pitem  name = "B27"  direction = "in"  />
+        <pitem  name = "B26"  direction = "in"  />
+        <pitem  name = "B25"  direction = "in"  />
+        <pitem  name = "B24"  direction = "in"  />
+        <pitem  name = "B23"  direction = "in"  />
+        <pitem  name = "B22"  direction = "in"  />
+        <pitem  name = "B21"  direction = "in"  />
+        <pitem  name = "B20"  direction = "in"  />
+        <pitem  name = "B19"  direction = "in"  />
+        <pitem  name = "B18"  direction = "in"  />
+        <pitem  name = "B17"  direction = "in"  />
+        <pitem  name = "B16"  direction = "in"  />
+        <pitem  name = "B15"  direction = "in"  />
+        <pitem  name = "B14"  direction = "in"  />
+        <pitem  name = "B13"  direction = "in"  />
+        <pitem  name = "B12"  direction = "in"  />
+        <pitem  name = "B11"  direction = "in"  />
+        <pitem  name = "B10"  direction = "in"  />
+        <pitem  name = "B9"  direction = "in"  />
+        <pitem  name = "B8"  direction = "in"  />
+        <pitem  name = "B7"  direction = "in"  />
+        <pitem  name = "B6"  direction = "in"  />
+        <pitem  name = "B5"  direction = "in"  />
+        <pitem  name = "B4"  direction = "in"  />
+        <pitem  name = "B3"  direction = "in"  />
+        <pitem  name = "B2"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "CFB53"  direction = "in"  />
+        <pitem  name = "CFB52"  direction = "in"  />
+        <pitem  name = "CFB51"  direction = "in"  />
+        <pitem  name = "CFB50"  direction = "in"  />
+        <pitem  name = "CFB49"  direction = "in"  />
+        <pitem  name = "CFB48"  direction = "in"  />
+        <pitem  name = "CFB47"  direction = "in"  />
+        <pitem  name = "CFB46"  direction = "in"  />
+        <pitem  name = "CFB45"  direction = "in"  />
+        <pitem  name = "CFB44"  direction = "in"  />
+        <pitem  name = "CFB43"  direction = "in"  />
+        <pitem  name = "CFB42"  direction = "in"  />
+        <pitem  name = "CFB41"  direction = "in"  />
+        <pitem  name = "CFB40"  direction = "in"  />
+        <pitem  name = "CFB39"  direction = "in"  />
+        <pitem  name = "CFB38"  direction = "in"  />
+        <pitem  name = "CFB37"  direction = "in"  />
+        <pitem  name = "CFB36"  direction = "in"  />
+        <pitem  name = "CFB35"  direction = "in"  />
+        <pitem  name = "CFB34"  direction = "in"  />
+        <pitem  name = "CFB33"  direction = "in"  />
+        <pitem  name = "CFB32"  direction = "in"  />
+        <pitem  name = "CFB31"  direction = "in"  />
+        <pitem  name = "CFB30"  direction = "in"  />
+        <pitem  name = "CFB29"  direction = "in"  />
+        <pitem  name = "CFB28"  direction = "in"  />
+        <pitem  name = "CFB27"  direction = "in"  />
+        <pitem  name = "CFB26"  direction = "in"  />
+        <pitem  name = "CFB25"  direction = "in"  />
+        <pitem  name = "CFB24"  direction = "in"  />
+        <pitem  name = "CFB23"  direction = "in"  />
+        <pitem  name = "CFB22"  direction = "in"  />
+        <pitem  name = "CFB21"  direction = "in"  />
+        <pitem  name = "CFB20"  direction = "in"  />
+        <pitem  name = "CFB19"  direction = "in"  />
+        <pitem  name = "CFB18"  direction = "in"  />
+        <pitem  name = "CFB17"  direction = "in"  />
+        <pitem  name = "CFB16"  direction = "in"  />
+        <pitem  name = "CFB15"  direction = "in"  />
+        <pitem  name = "CFB14"  direction = "in"  />
+        <pitem  name = "CFB13"  direction = "in"  />
+        <pitem  name = "CFB12"  direction = "in"  />
+        <pitem  name = "CFB11"  direction = "in"  />
+        <pitem  name = "CFB10"  direction = "in"  />
+        <pitem  name = "CFB9"  direction = "in"  />
+        <pitem  name = "CFB8"  direction = "in"  />
+        <pitem  name = "CFB7"  direction = "in"  />
+        <pitem  name = "CFB6"  direction = "in"  />
+        <pitem  name = "CFB5"  direction = "in"  />
+        <pitem  name = "CFB4"  direction = "in"  />
+        <pitem  name = "CFB3"  direction = "in"  />
+        <pitem  name = "CFB2"  direction = "in"  />
+        <pitem  name = "CFB1"  direction = "in"  />
+        <pitem  name = "CFB0"  direction = "in"  />
+        <pitem  name = "C53"  direction = "in"  />
+        <pitem  name = "C52"  direction = "in"  />
+        <pitem  name = "C51"  direction = "in"  />
+        <pitem  name = "C50"  direction = "in"  />
+        <pitem  name = "C49"  direction = "in"  />
+        <pitem  name = "C48"  direction = "in"  />
+        <pitem  name = "C47"  direction = "in"  />
+        <pitem  name = "C46"  direction = "in"  />
+        <pitem  name = "C45"  direction = "in"  />
+        <pitem  name = "C44"  direction = "in"  />
+        <pitem  name = "C43"  direction = "in"  />
+        <pitem  name = "C42"  direction = "in"  />
+        <pitem  name = "C41"  direction = "in"  />
+        <pitem  name = "C40"  direction = "in"  />
+        <pitem  name = "C39"  direction = "in"  />
+        <pitem  name = "C38"  direction = "in"  />
+        <pitem  name = "C37"  direction = "in"  />
+        <pitem  name = "C36"  direction = "in"  />
+        <pitem  name = "C35"  direction = "in"  />
+        <pitem  name = "C34"  direction = "in"  />
+        <pitem  name = "C33"  direction = "in"  />
+        <pitem  name = "C32"  direction = "in"  />
+        <pitem  name = "C31"  direction = "in"  />
+        <pitem  name = "C30"  direction = "in"  />
+        <pitem  name = "C29"  direction = "in"  />
+        <pitem  name = "C28"  direction = "in"  />
+        <pitem  name = "C27"  direction = "in"  />
+        <pitem  name = "C26"  direction = "in"  />
+        <pitem  name = "C25"  direction = "in"  />
+        <pitem  name = "C24"  direction = "in"  />
+        <pitem  name = "C23"  direction = "in"  />
+        <pitem  name = "C22"  direction = "in"  />
+        <pitem  name = "C21"  direction = "in"  />
+        <pitem  name = "C20"  direction = "in"  />
+        <pitem  name = "C19"  direction = "in"  />
+        <pitem  name = "C18"  direction = "in"  />
+        <pitem  name = "C17"  direction = "in"  />
+        <pitem  name = "C16"  direction = "in"  />
+        <pitem  name = "C15"  direction = "in"  />
+        <pitem  name = "C14"  direction = "in"  />
+        <pitem  name = "C13"  direction = "in"  />
+        <pitem  name = "C12"  direction = "in"  />
+        <pitem  name = "C11"  direction = "in"  />
+        <pitem  name = "C10"  direction = "in"  />
+        <pitem  name = "C9"  direction = "in"  />
+        <pitem  name = "C8"  direction = "in"  />
+        <pitem  name = "C7"  direction = "in"  />
+        <pitem  name = "C6"  direction = "in"  />
+        <pitem  name = "C5"  direction = "in"  />
+        <pitem  name = "C4"  direction = "in"  />
+        <pitem  name = "C3"  direction = "in"  />
+        <pitem  name = "C2"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "CE0"  direction = "in"  />
+        <pitem  name = "CE1"  direction = "in"  />
+        <pitem  name = "CE2"  direction = "in"  />
+        <pitem  name = "CE3"  direction = "in"  />
+        <pitem  name = "CLK0"  direction = "in"  />
+        <pitem  name = "CLK1"  direction = "in"  />
+        <pitem  name = "CLK2"  direction = "in"  />
+        <pitem  name = "CLK3"  direction = "in"  />
+        <pitem  name = "RST0"  direction = "in"  />
+        <pitem  name = "RST1"  direction = "in"  />
+        <pitem  name = "RST2"  direction = "in"  />
+        <pitem  name = "RST3"  direction = "in"  />
+        <pitem  name = "SIGNEDIA"  direction = "in"  />
+        <pitem  name = "SIGNEDIB"  direction = "in"  />
+        <pitem  name = "SIGNEDCIN"  direction = "in"  />
+        <pitem  name = "MA35"  direction = "in"  />
+        <pitem  name = "MA34"  direction = "in"  />
+        <pitem  name = "MA33"  direction = "in"  />
+        <pitem  name = "MA32"  direction = "in"  />
+        <pitem  name = "MA31"  direction = "in"  />
+        <pitem  name = "MA30"  direction = "in"  />
+        <pitem  name = "MA29"  direction = "in"  />
+        <pitem  name = "MA28"  direction = "in"  />
+        <pitem  name = "MA27"  direction = "in"  />
+        <pitem  name = "MA26"  direction = "in"  />
+        <pitem  name = "MA25"  direction = "in"  />
+        <pitem  name = "MA24"  direction = "in"  />
+        <pitem  name = "MA23"  direction = "in"  />
+        <pitem  name = "MA22"  direction = "in"  />
+        <pitem  name = "MA21"  direction = "in"  />
+        <pitem  name = "MA20"  direction = "in"  />
+        <pitem  name = "MA19"  direction = "in"  />
+        <pitem  name = "MA18"  direction = "in"  />
+        <pitem  name = "MA17"  direction = "in"  />
+        <pitem  name = "MA16"  direction = "in"  />
+        <pitem  name = "MA15"  direction = "in"  />
+        <pitem  name = "MA14"  direction = "in"  />
+        <pitem  name = "MA13"  direction = "in"  />
+        <pitem  name = "MA12"  direction = "in"  />
+        <pitem  name = "MA11"  direction = "in"  />
+        <pitem  name = "MA10"  direction = "in"  />
+        <pitem  name = "MA9"  direction = "in"  />
+        <pitem  name = "MA8"  direction = "in"  />
+        <pitem  name = "MA7"  direction = "in"  />
+        <pitem  name = "MA6"  direction = "in"  />
+        <pitem  name = "MA5"  direction = "in"  />
+        <pitem  name = "MA4"  direction = "in"  />
+        <pitem  name = "MA3"  direction = "in"  />
+        <pitem  name = "MA2"  direction = "in"  />
+        <pitem  name = "MA1"  direction = "in"  />
+        <pitem  name = "MA0"  direction = "in"  />
+        <pitem  name = "MB35"  direction = "in"  />
+        <pitem  name = "MB34"  direction = "in"  />
+        <pitem  name = "MB33"  direction = "in"  />
+        <pitem  name = "MB32"  direction = "in"  />
+        <pitem  name = "MB31"  direction = "in"  />
+        <pitem  name = "MB30"  direction = "in"  />
+        <pitem  name = "MB29"  direction = "in"  />
+        <pitem  name = "MB28"  direction = "in"  />
+        <pitem  name = "MB27"  direction = "in"  />
+        <pitem  name = "MB26"  direction = "in"  />
+        <pitem  name = "MB25"  direction = "in"  />
+        <pitem  name = "MB24"  direction = "in"  />
+        <pitem  name = "MB23"  direction = "in"  />
+        <pitem  name = "MB22"  direction = "in"  />
+        <pitem  name = "MB21"  direction = "in"  />
+        <pitem  name = "MB20"  direction = "in"  />
+        <pitem  name = "MB19"  direction = "in"  />
+        <pitem  name = "MB18"  direction = "in"  />
+        <pitem  name = "MB17"  direction = "in"  />
+        <pitem  name = "MB16"  direction = "in"  />
+        <pitem  name = "MB15"  direction = "in"  />
+        <pitem  name = "MB14"  direction = "in"  />
+        <pitem  name = "MB13"  direction = "in"  />
+        <pitem  name = "MB12"  direction = "in"  />
+        <pitem  name = "MB11"  direction = "in"  />
+        <pitem  name = "MB10"  direction = "in"  />
+        <pitem  name = "MB9"  direction = "in"  />
+        <pitem  name = "MB8"  direction = "in"  />
+        <pitem  name = "MB7"  direction = "in"  />
+        <pitem  name = "MB6"  direction = "in"  />
+        <pitem  name = "MB5"  direction = "in"  />
+        <pitem  name = "MB4"  direction = "in"  />
+        <pitem  name = "MB3"  direction = "in"  />
+        <pitem  name = "MB2"  direction = "in"  />
+        <pitem  name = "MB1"  direction = "in"  />
+        <pitem  name = "MB0"  direction = "in"  />
+        <pitem  name = "CIN53"  direction = "in"  />
+        <pitem  name = "CIN52"  direction = "in"  />
+        <pitem  name = "CIN51"  direction = "in"  />
+        <pitem  name = "CIN50"  direction = "in"  />
+        <pitem  name = "CIN49"  direction = "in"  />
+        <pitem  name = "CIN48"  direction = "in"  />
+        <pitem  name = "CIN47"  direction = "in"  />
+        <pitem  name = "CIN46"  direction = "in"  />
+        <pitem  name = "CIN45"  direction = "in"  />
+        <pitem  name = "CIN44"  direction = "in"  />
+        <pitem  name = "CIN43"  direction = "in"  />
+        <pitem  name = "CIN42"  direction = "in"  />
+        <pitem  name = "CIN41"  direction = "in"  />
+        <pitem  name = "CIN40"  direction = "in"  />
+        <pitem  name = "CIN39"  direction = "in"  />
+        <pitem  name = "CIN38"  direction = "in"  />
+        <pitem  name = "CIN37"  direction = "in"  />
+        <pitem  name = "CIN36"  direction = "in"  />
+        <pitem  name = "CIN35"  direction = "in"  />
+        <pitem  name = "CIN34"  direction = "in"  />
+        <pitem  name = "CIN33"  direction = "in"  />
+        <pitem  name = "CIN32"  direction = "in"  />
+        <pitem  name = "CIN31"  direction = "in"  />
+        <pitem  name = "CIN30"  direction = "in"  />
+        <pitem  name = "CIN29"  direction = "in"  />
+        <pitem  name = "CIN28"  direction = "in"  />
+        <pitem  name = "CIN27"  direction = "in"  />
+        <pitem  name = "CIN26"  direction = "in"  />
+        <pitem  name = "CIN25"  direction = "in"  />
+        <pitem  name = "CIN24"  direction = "in"  />
+        <pitem  name = "CIN23"  direction = "in"  />
+        <pitem  name = "CIN22"  direction = "in"  />
+        <pitem  name = "CIN21"  direction = "in"  />
+        <pitem  name = "CIN20"  direction = "in"  />
+        <pitem  name = "CIN19"  direction = "in"  />
+        <pitem  name = "CIN18"  direction = "in"  />
+        <pitem  name = "CIN17"  direction = "in"  />
+        <pitem  name = "CIN16"  direction = "in"  />
+        <pitem  name = "CIN15"  direction = "in"  />
+        <pitem  name = "CIN14"  direction = "in"  />
+        <pitem  name = "CIN13"  direction = "in"  />
+        <pitem  name = "CIN12"  direction = "in"  />
+        <pitem  name = "CIN11"  direction = "in"  />
+        <pitem  name = "CIN10"  direction = "in"  />
+        <pitem  name = "CIN9"  direction = "in"  />
+        <pitem  name = "CIN8"  direction = "in"  />
+        <pitem  name = "CIN7"  direction = "in"  />
+        <pitem  name = "CIN6"  direction = "in"  />
+        <pitem  name = "CIN5"  direction = "in"  />
+        <pitem  name = "CIN4"  direction = "in"  />
+        <pitem  name = "CIN3"  direction = "in"  />
+        <pitem  name = "CIN2"  direction = "in"  />
+        <pitem  name = "CIN1"  direction = "in"  />
+        <pitem  name = "CIN0"  direction = "in"  />
+        <pitem  name = "OP10"  direction = "in"  />
+        <pitem  name = "OP9"  direction = "in"  />
+        <pitem  name = "OP8"  direction = "in"  />
+        <pitem  name = "OP7"  direction = "in"  />
+        <pitem  name = "OP6"  direction = "in"  />
+        <pitem  name = "OP5"  direction = "in"  />
+        <pitem  name = "OP4"  direction = "in"  />
+        <pitem  name = "OP3"  direction = "in"  />
+        <pitem  name = "OP2"  direction = "in"  />
+        <pitem  name = "OP1"  direction = "in"  />
+        <pitem  name = "OP0"  direction = "in"  />
+        <pitem  name = "R53"  direction = "out"  />
+        <pitem  name = "R52"  direction = "out"  />
+        <pitem  name = "R51"  direction = "out"  />
+        <pitem  name = "R50"  direction = "out"  />
+        <pitem  name = "R49"  direction = "out"  />
+        <pitem  name = "R48"  direction = "out"  />
+        <pitem  name = "R47"  direction = "out"  />
+        <pitem  name = "R46"  direction = "out"  />
+        <pitem  name = "R45"  direction = "out"  />
+        <pitem  name = "R44"  direction = "out"  />
+        <pitem  name = "R43"  direction = "out"  />
+        <pitem  name = "R42"  direction = "out"  />
+        <pitem  name = "R41"  direction = "out"  />
+        <pitem  name = "R40"  direction = "out"  />
+        <pitem  name = "R39"  direction = "out"  />
+        <pitem  name = "R38"  direction = "out"  />
+        <pitem  name = "R37"  direction = "out"  />
+        <pitem  name = "R36"  direction = "out"  />
+        <pitem  name = "R35"  direction = "out"  />
+        <pitem  name = "R34"  direction = "out"  />
+        <pitem  name = "R33"  direction = "out"  />
+        <pitem  name = "R32"  direction = "out"  />
+        <pitem  name = "R31"  direction = "out"  />
+        <pitem  name = "R30"  direction = "out"  />
+        <pitem  name = "R29"  direction = "out"  />
+        <pitem  name = "R28"  direction = "out"  />
+        <pitem  name = "R27"  direction = "out"  />
+        <pitem  name = "R26"  direction = "out"  />
+        <pitem  name = "R25"  direction = "out"  />
+        <pitem  name = "R24"  direction = "out"  />
+        <pitem  name = "R23"  direction = "out"  />
+        <pitem  name = "R22"  direction = "out"  />
+        <pitem  name = "R21"  direction = "out"  />
+        <pitem  name = "R20"  direction = "out"  />
+        <pitem  name = "R19"  direction = "out"  />
+        <pitem  name = "R18"  direction = "out"  />
+        <pitem  name = "R17"  direction = "out"  />
+        <pitem  name = "R16"  direction = "out"  />
+        <pitem  name = "R15"  direction = "out"  />
+        <pitem  name = "R14"  direction = "out"  />
+        <pitem  name = "R13"  direction = "out"  />
+        <pitem  name = "R12"  direction = "out"  />
+        <pitem  name = "R11"  direction = "out"  />
+        <pitem  name = "R10"  direction = "out"  />
+        <pitem  name = "R9"  direction = "out"  />
+        <pitem  name = "R8"  direction = "out"  />
+        <pitem  name = "R7"  direction = "out"  />
+        <pitem  name = "R6"  direction = "out"  />
+        <pitem  name = "R5"  direction = "out"  />
+        <pitem  name = "R4"  direction = "out"  />
+        <pitem  name = "R3"  direction = "out"  />
+        <pitem  name = "R2"  direction = "out"  />
+        <pitem  name = "R1"  direction = "out"  />
+        <pitem  name = "R0"  direction = "out"  />
+        <pitem  name = "EQZ"  direction = "out"  />
+        <pitem  name = "EQZM"  direction = "out"  />
+        <pitem  name = "EQOM"  direction = "out"  />
+        <pitem  name = "EQPAT"  direction = "out"  />
+        <pitem  name = "EQPATB"  direction = "out"  />
+        <pitem  name = "OVER"  direction = "out"  />
+        <pitem  name = "UNDER"  direction = "out"  />
+        <pitem  name = "SIGNEDR"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_0"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "C[53]"  />
+        <nitem  name = "C[52]"  />
+        <nitem  name = "C[51]"  />
+        <nitem  name = "C[50]"  />
+        <nitem  name = "C[49]"  />
+        <nitem  name = "C[48]"  />
+        <nitem  name = "C[47]"  />
+        <nitem  name = "C[46]"  />
+        <nitem  name = "C[45]"  />
+        <nitem  name = "C[44]"  />
+        <nitem  name = "C[43]"  />
+        <nitem  name = "C[42]"  />
+        <nitem  name = "C[41]"  />
+        <nitem  name = "C[40]"  />
+        <nitem  name = "C[39]"  />
+        <nitem  name = "C[38]"  />
+        <nitem  name = "C[37]"  />
+        <nitem  name = "C[36]"  />
+        <nitem  name = "C[35]"  />
+        <nitem  name = "C[34]"  />
+        <nitem  name = "C[33]"  />
+        <nitem  name = "C[32]"  />
+        <nitem  name = "C[31]"  />
+        <nitem  name = "C[30]"  />
+        <nitem  name = "C[29]"  />
+        <nitem  name = "C[28]"  />
+        <nitem  name = "C[27]"  />
+        <nitem  name = "C[26]"  />
+        <nitem  name = "C[25]"  />
+        <nitem  name = "C[24]"  />
+        <nitem  name = "C[23]"  />
+        <nitem  name = "C[22]"  />
+        <nitem  name = "C[21]"  />
+        <nitem  name = "C[20]"  />
+        <nitem  name = "C[19]"  />
+        <nitem  name = "C[18]"  />
+        <nitem  name = "C[17]"  />
+        <nitem  name = "C[16]"  />
+        <nitem  name = "C[15]"  />
+        <nitem  name = "C[14]"  />
+        <nitem  name = "C[13]"  />
+        <nitem  name = "C[12]"  />
+        <nitem  name = "C[11]"  />
+        <nitem  name = "C[10]"  />
+        <nitem  name = "C[9]"  />
+        <nitem  name = "C[8]"  />
+        <nitem  name = "C[7]"  />
+        <nitem  name = "C[6]"  />
+        <nitem  name = "C[5]"  />
+        <nitem  name = "C[4]"  />
+        <nitem  name = "C[3]"  />
+        <nitem  name = "C[2]"  />
+        <nitem  name = "C[1]"  />
+        <nitem  name = "C[0]"  />
+        <nitem  name = "CE0"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "CLK0"  />
+        <nitem  name = "RST0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_signedp_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_signedp_1"  />
+        <nitem  name = "SignCin"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_35"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_34"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_33"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_32"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_31"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_30"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_29"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_28"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_27"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_26"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_25"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_24"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_23"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_22"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_21"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_20"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_19"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_18"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_35"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_34"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_33"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_32"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_31"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_30"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_29"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_28"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_27"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_26"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_25"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_24"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_23"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_22"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_21"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_20"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_19"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_18"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_0"  />
+        <nitem  name = "Cin[53]"  />
+        <nitem  name = "Cin[52]"  />
+        <nitem  name = "Cin[51]"  />
+        <nitem  name = "Cin[50]"  />
+        <nitem  name = "Cin[49]"  />
+        <nitem  name = "Cin[48]"  />
+        <nitem  name = "Cin[47]"  />
+        <nitem  name = "Cin[46]"  />
+        <nitem  name = "Cin[45]"  />
+        <nitem  name = "Cin[44]"  />
+        <nitem  name = "Cin[43]"  />
+        <nitem  name = "Cin[42]"  />
+        <nitem  name = "Cin[41]"  />
+        <nitem  name = "Cin[40]"  />
+        <nitem  name = "Cin[39]"  />
+        <nitem  name = "Cin[38]"  />
+        <nitem  name = "Cin[37]"  />
+        <nitem  name = "Cin[36]"  />
+        <nitem  name = "Cin[35]"  />
+        <nitem  name = "Cin[34]"  />
+        <nitem  name = "Cin[33]"  />
+        <nitem  name = "Cin[32]"  />
+        <nitem  name = "Cin[31]"  />
+        <nitem  name = "Cin[30]"  />
+        <nitem  name = "Cin[29]"  />
+        <nitem  name = "Cin[28]"  />
+        <nitem  name = "Cin[27]"  />
+        <nitem  name = "Cin[26]"  />
+        <nitem  name = "Cin[25]"  />
+        <nitem  name = "Cin[24]"  />
+        <nitem  name = "Cin[23]"  />
+        <nitem  name = "Cin[22]"  />
+        <nitem  name = "Cin[21]"  />
+        <nitem  name = "Cin[20]"  />
+        <nitem  name = "Cin[19]"  />
+        <nitem  name = "Cin[18]"  />
+        <nitem  name = "Cin[17]"  />
+        <nitem  name = "Cin[16]"  />
+        <nitem  name = "Cin[15]"  />
+        <nitem  name = "Cin[14]"  />
+        <nitem  name = "Cin[13]"  />
+        <nitem  name = "Cin[12]"  />
+        <nitem  name = "Cin[11]"  />
+        <nitem  name = "Cin[10]"  />
+        <nitem  name = "Cin[9]"  />
+        <nitem  name = "Cin[8]"  />
+        <nitem  name = "Cin[7]"  />
+        <nitem  name = "Cin[6]"  />
+        <nitem  name = "Cin[5]"  />
+        <nitem  name = "Cin[4]"  />
+        <nitem  name = "Cin[3]"  />
+        <nitem  name = "Cin[2]"  />
+        <nitem  name = "Cin[1]"  />
+        <nitem  name = "Cin[0]"  />
+        <nitem  name = "Opcode[3]"  />
+        <nitem  name = "Opcode[2]"  />
+        <nitem  name = "Opcode[1]"  />
+        <nitem  name = "Opcode[0]"  />
+        <nitem  name = "CMuxsel[2]"  />
+        <nitem  name = "CMuxsel[1]"  />
+        <nitem  name = "CMuxsel[0]"  />
+        <nitem  name = "BMuxsel[1]"  />
+        <nitem  name = "BMuxsel[0]"  />
+        <nitem  name = "AMuxsel[1]"  />
+        <nitem  name = "AMuxsel[0]"  />
+        <nitem  name = "Result[53]"  />
+        <nitem  name = "Result[52]"  />
+        <nitem  name = "Result[51]"  />
+        <nitem  name = "Result[50]"  />
+        <nitem  name = "Result[49]"  />
+        <nitem  name = "Result[48]"  />
+        <nitem  name = "Result[47]"  />
+        <nitem  name = "Result[46]"  />
+        <nitem  name = "Result[45]"  />
+        <nitem  name = "Result[44]"  />
+        <nitem  name = "Result[43]"  />
+        <nitem  name = "Result[42]"  />
+        <nitem  name = "Result[41]"  />
+        <nitem  name = "Result[40]"  />
+        <nitem  name = "Result[39]"  />
+        <nitem  name = "Result[38]"  />
+        <nitem  name = "Result[37]"  />
+        <nitem  name = "Result[36]"  />
+        <nitem  name = "Result[35]"  />
+        <nitem  name = "Result[34]"  />
+        <nitem  name = "Result[33]"  />
+        <nitem  name = "Result[32]"  />
+        <nitem  name = "Result[31]"  />
+        <nitem  name = "Result[30]"  />
+        <nitem  name = "Result[29]"  />
+        <nitem  name = "Result[28]"  />
+        <nitem  name = "Result[27]"  />
+        <nitem  name = "Result[26]"  />
+        <nitem  name = "Result[25]"  />
+        <nitem  name = "Result[24]"  />
+        <nitem  name = "Result[23]"  />
+        <nitem  name = "Result[22]"  />
+        <nitem  name = "Result[21]"  />
+        <nitem  name = "Result[20]"  />
+        <nitem  name = "Result[19]"  />
+        <nitem  name = "Result[18]"  />
+        <nitem  name = "Result[17]"  />
+        <nitem  name = "Result[16]"  />
+        <nitem  name = "Result[15]"  />
+        <nitem  name = "Result[14]"  />
+        <nitem  name = "Result[13]"  />
+        <nitem  name = "Result[12]"  />
+        <nitem  name = "Result[11]"  />
+        <nitem  name = "Result[10]"  />
+        <nitem  name = "Result[9]"  />
+        <nitem  name = "Result[8]"  />
+        <nitem  name = "Result[7]"  />
+        <nitem  name = "Result[6]"  />
+        <nitem  name = "Result[5]"  />
+        <nitem  name = "Result[4]"  />
+        <nitem  name = "Result[3]"  />
+        <nitem  name = "Result[2]"  />
+        <nitem  name = "Result[1]"  />
+        <nitem  name = "Result[0]"  />
+        <nitem  name = "EQZ"  />
+        <nitem  name = "EQZM"  />
+        <nitem  name = "EQOM"  />
+        <nitem  name = "EQPAT"  />
+        <nitem  name = "EQPATB"  />
+        <nitem  name = "OVER"  />
+        <nitem  name = "UNDER"  />
+        <nitem  name = "SignR"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dsp_mult_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A17"  direction = "in"  />
+        <pitem  name = "A16"  direction = "in"  />
+        <pitem  name = "A15"  direction = "in"  />
+        <pitem  name = "A14"  direction = "in"  />
+        <pitem  name = "A13"  direction = "in"  />
+        <pitem  name = "A12"  direction = "in"  />
+        <pitem  name = "A11"  direction = "in"  />
+        <pitem  name = "A10"  direction = "in"  />
+        <pitem  name = "A9"  direction = "in"  />
+        <pitem  name = "A8"  direction = "in"  />
+        <pitem  name = "A7"  direction = "in"  />
+        <pitem  name = "A6"  direction = "in"  />
+        <pitem  name = "A5"  direction = "in"  />
+        <pitem  name = "A4"  direction = "in"  />
+        <pitem  name = "A3"  direction = "in"  />
+        <pitem  name = "A2"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "B17"  direction = "in"  />
+        <pitem  name = "B16"  direction = "in"  />
+        <pitem  name = "B15"  direction = "in"  />
+        <pitem  name = "B14"  direction = "in"  />
+        <pitem  name = "B13"  direction = "in"  />
+        <pitem  name = "B12"  direction = "in"  />
+        <pitem  name = "B11"  direction = "in"  />
+        <pitem  name = "B10"  direction = "in"  />
+        <pitem  name = "B9"  direction = "in"  />
+        <pitem  name = "B8"  direction = "in"  />
+        <pitem  name = "B7"  direction = "in"  />
+        <pitem  name = "B6"  direction = "in"  />
+        <pitem  name = "B5"  direction = "in"  />
+        <pitem  name = "B4"  direction = "in"  />
+        <pitem  name = "B3"  direction = "in"  />
+        <pitem  name = "B2"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "C17"  direction = "in"  />
+        <pitem  name = "C16"  direction = "in"  />
+        <pitem  name = "C15"  direction = "in"  />
+        <pitem  name = "C14"  direction = "in"  />
+        <pitem  name = "C13"  direction = "in"  />
+        <pitem  name = "C12"  direction = "in"  />
+        <pitem  name = "C11"  direction = "in"  />
+        <pitem  name = "C10"  direction = "in"  />
+        <pitem  name = "C9"  direction = "in"  />
+        <pitem  name = "C8"  direction = "in"  />
+        <pitem  name = "C7"  direction = "in"  />
+        <pitem  name = "C6"  direction = "in"  />
+        <pitem  name = "C5"  direction = "in"  />
+        <pitem  name = "C4"  direction = "in"  />
+        <pitem  name = "C3"  direction = "in"  />
+        <pitem  name = "C2"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "SIGNEDA"  direction = "in"  />
+        <pitem  name = "SIGNEDB"  direction = "in"  />
+        <pitem  name = "SOURCEA"  direction = "in"  />
+        <pitem  name = "SOURCEB"  direction = "in"  />
+        <pitem  name = "CE0"  direction = "in"  />
+        <pitem  name = "CE1"  direction = "in"  />
+        <pitem  name = "CE2"  direction = "in"  />
+        <pitem  name = "CE3"  direction = "in"  />
+        <pitem  name = "CLK0"  direction = "in"  />
+        <pitem  name = "CLK1"  direction = "in"  />
+        <pitem  name = "CLK2"  direction = "in"  />
+        <pitem  name = "CLK3"  direction = "in"  />
+        <pitem  name = "RST0"  direction = "in"  />
+        <pitem  name = "RST1"  direction = "in"  />
+        <pitem  name = "RST2"  direction = "in"  />
+        <pitem  name = "RST3"  direction = "in"  />
+        <pitem  name = "SRIA17"  direction = "in"  />
+        <pitem  name = "SRIA16"  direction = "in"  />
+        <pitem  name = "SRIA15"  direction = "in"  />
+        <pitem  name = "SRIA14"  direction = "in"  />
+        <pitem  name = "SRIA13"  direction = "in"  />
+        <pitem  name = "SRIA12"  direction = "in"  />
+        <pitem  name = "SRIA11"  direction = "in"  />
+        <pitem  name = "SRIA10"  direction = "in"  />
+        <pitem  name = "SRIA9"  direction = "in"  />
+        <pitem  name = "SRIA8"  direction = "in"  />
+        <pitem  name = "SRIA7"  direction = "in"  />
+        <pitem  name = "SRIA6"  direction = "in"  />
+        <pitem  name = "SRIA5"  direction = "in"  />
+        <pitem  name = "SRIA4"  direction = "in"  />
+        <pitem  name = "SRIA3"  direction = "in"  />
+        <pitem  name = "SRIA2"  direction = "in"  />
+        <pitem  name = "SRIA1"  direction = "in"  />
+        <pitem  name = "SRIA0"  direction = "in"  />
+        <pitem  name = "SRIB17"  direction = "in"  />
+        <pitem  name = "SRIB16"  direction = "in"  />
+        <pitem  name = "SRIB15"  direction = "in"  />
+        <pitem  name = "SRIB14"  direction = "in"  />
+        <pitem  name = "SRIB13"  direction = "in"  />
+        <pitem  name = "SRIB12"  direction = "in"  />
+        <pitem  name = "SRIB11"  direction = "in"  />
+        <pitem  name = "SRIB10"  direction = "in"  />
+        <pitem  name = "SRIB9"  direction = "in"  />
+        <pitem  name = "SRIB8"  direction = "in"  />
+        <pitem  name = "SRIB7"  direction = "in"  />
+        <pitem  name = "SRIB6"  direction = "in"  />
+        <pitem  name = "SRIB5"  direction = "in"  />
+        <pitem  name = "SRIB4"  direction = "in"  />
+        <pitem  name = "SRIB3"  direction = "in"  />
+        <pitem  name = "SRIB2"  direction = "in"  />
+        <pitem  name = "SRIB1"  direction = "in"  />
+        <pitem  name = "SRIB0"  direction = "in"  />
+        <pitem  name = "ROA17"  direction = "out"  />
+        <pitem  name = "ROA16"  direction = "out"  />
+        <pitem  name = "ROA15"  direction = "out"  />
+        <pitem  name = "ROA14"  direction = "out"  />
+        <pitem  name = "ROA13"  direction = "out"  />
+        <pitem  name = "ROA12"  direction = "out"  />
+        <pitem  name = "ROA11"  direction = "out"  />
+        <pitem  name = "ROA10"  direction = "out"  />
+        <pitem  name = "ROA9"  direction = "out"  />
+        <pitem  name = "ROA8"  direction = "out"  />
+        <pitem  name = "ROA7"  direction = "out"  />
+        <pitem  name = "ROA6"  direction = "out"  />
+        <pitem  name = "ROA5"  direction = "out"  />
+        <pitem  name = "ROA4"  direction = "out"  />
+        <pitem  name = "ROA3"  direction = "out"  />
+        <pitem  name = "ROA2"  direction = "out"  />
+        <pitem  name = "ROA1"  direction = "out"  />
+        <pitem  name = "ROA0"  direction = "out"  />
+        <pitem  name = "ROB17"  direction = "out"  />
+        <pitem  name = "ROB16"  direction = "out"  />
+        <pitem  name = "ROB15"  direction = "out"  />
+        <pitem  name = "ROB14"  direction = "out"  />
+        <pitem  name = "ROB13"  direction = "out"  />
+        <pitem  name = "ROB12"  direction = "out"  />
+        <pitem  name = "ROB11"  direction = "out"  />
+        <pitem  name = "ROB10"  direction = "out"  />
+        <pitem  name = "ROB9"  direction = "out"  />
+        <pitem  name = "ROB8"  direction = "out"  />
+        <pitem  name = "ROB7"  direction = "out"  />
+        <pitem  name = "ROB6"  direction = "out"  />
+        <pitem  name = "ROB5"  direction = "out"  />
+        <pitem  name = "ROB4"  direction = "out"  />
+        <pitem  name = "ROB3"  direction = "out"  />
+        <pitem  name = "ROB2"  direction = "out"  />
+        <pitem  name = "ROB1"  direction = "out"  />
+        <pitem  name = "ROB0"  direction = "out"  />
+        <pitem  name = "P35"  direction = "out"  />
+        <pitem  name = "P34"  direction = "out"  />
+        <pitem  name = "P33"  direction = "out"  />
+        <pitem  name = "P32"  direction = "out"  />
+        <pitem  name = "P31"  direction = "out"  />
+        <pitem  name = "P30"  direction = "out"  />
+        <pitem  name = "P29"  direction = "out"  />
+        <pitem  name = "P28"  direction = "out"  />
+        <pitem  name = "P27"  direction = "out"  />
+        <pitem  name = "P26"  direction = "out"  />
+        <pitem  name = "P25"  direction = "out"  />
+        <pitem  name = "P24"  direction = "out"  />
+        <pitem  name = "P23"  direction = "out"  />
+        <pitem  name = "P22"  direction = "out"  />
+        <pitem  name = "P21"  direction = "out"  />
+        <pitem  name = "P20"  direction = "out"  />
+        <pitem  name = "P19"  direction = "out"  />
+        <pitem  name = "P18"  direction = "out"  />
+        <pitem  name = "P17"  direction = "out"  />
+        <pitem  name = "P16"  direction = "out"  />
+        <pitem  name = "P15"  direction = "out"  />
+        <pitem  name = "P14"  direction = "out"  />
+        <pitem  name = "P13"  direction = "out"  />
+        <pitem  name = "P12"  direction = "out"  />
+        <pitem  name = "P11"  direction = "out"  />
+        <pitem  name = "P10"  direction = "out"  />
+        <pitem  name = "P9"  direction = "out"  />
+        <pitem  name = "P8"  direction = "out"  />
+        <pitem  name = "P7"  direction = "out"  />
+        <pitem  name = "P6"  direction = "out"  />
+        <pitem  name = "P5"  direction = "out"  />
+        <pitem  name = "P4"  direction = "out"  />
+        <pitem  name = "P3"  direction = "out"  />
+        <pitem  name = "P2"  direction = "out"  />
+        <pitem  name = "P1"  direction = "out"  />
+        <pitem  name = "P0"  direction = "out"  />
+        <pitem  name = "SIGNEDP"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "AA[17]"  />
+        <nitem  name = "AA[16]"  />
+        <nitem  name = "AA[15]"  />
+        <nitem  name = "AA[14]"  />
+        <nitem  name = "AA[13]"  />
+        <nitem  name = "AA[12]"  />
+        <nitem  name = "AA[11]"  />
+        <nitem  name = "AA[10]"  />
+        <nitem  name = "AA[9]"  />
+        <nitem  name = "AA[8]"  />
+        <nitem  name = "AA[7]"  />
+        <nitem  name = "AA[6]"  />
+        <nitem  name = "AA[5]"  />
+        <nitem  name = "AA[4]"  />
+        <nitem  name = "AA[3]"  />
+        <nitem  name = "AA[2]"  />
+        <nitem  name = "AA[1]"  />
+        <nitem  name = "AA[0]"  />
+        <nitem  name = "AB[17]"  />
+        <nitem  name = "AB[16]"  />
+        <nitem  name = "AB[15]"  />
+        <nitem  name = "AB[14]"  />
+        <nitem  name = "AB[13]"  />
+        <nitem  name = "AB[12]"  />
+        <nitem  name = "AB[11]"  />
+        <nitem  name = "AB[10]"  />
+        <nitem  name = "AB[9]"  />
+        <nitem  name = "AB[8]"  />
+        <nitem  name = "AB[7]"  />
+        <nitem  name = "AB[6]"  />
+        <nitem  name = "AB[5]"  />
+        <nitem  name = "AB[4]"  />
+        <nitem  name = "AB[3]"  />
+        <nitem  name = "AB[2]"  />
+        <nitem  name = "AB[1]"  />
+        <nitem  name = "AB[0]"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "CE0"  />
+        <nitem  name = "CLK0"  />
+        <nitem  name = "RST0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_0_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_0_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_35"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_34"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_33"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_32"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_31"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_30"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_29"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_28"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_27"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_26"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_25"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_24"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_23"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_22"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_21"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_20"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_19"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_18"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_0_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_signedp_0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "scuba_vhi_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vhi"  />
+        </nets>
+    </instance>
+
+    <instance  name = "scuba_vlo_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dsp_mult_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A17"  direction = "in"  />
+        <pitem  name = "A16"  direction = "in"  />
+        <pitem  name = "A15"  direction = "in"  />
+        <pitem  name = "A14"  direction = "in"  />
+        <pitem  name = "A13"  direction = "in"  />
+        <pitem  name = "A12"  direction = "in"  />
+        <pitem  name = "A11"  direction = "in"  />
+        <pitem  name = "A10"  direction = "in"  />
+        <pitem  name = "A9"  direction = "in"  />
+        <pitem  name = "A8"  direction = "in"  />
+        <pitem  name = "A7"  direction = "in"  />
+        <pitem  name = "A6"  direction = "in"  />
+        <pitem  name = "A5"  direction = "in"  />
+        <pitem  name = "A4"  direction = "in"  />
+        <pitem  name = "A3"  direction = "in"  />
+        <pitem  name = "A2"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "B17"  direction = "in"  />
+        <pitem  name = "B16"  direction = "in"  />
+        <pitem  name = "B15"  direction = "in"  />
+        <pitem  name = "B14"  direction = "in"  />
+        <pitem  name = "B13"  direction = "in"  />
+        <pitem  name = "B12"  direction = "in"  />
+        <pitem  name = "B11"  direction = "in"  />
+        <pitem  name = "B10"  direction = "in"  />
+        <pitem  name = "B9"  direction = "in"  />
+        <pitem  name = "B8"  direction = "in"  />
+        <pitem  name = "B7"  direction = "in"  />
+        <pitem  name = "B6"  direction = "in"  />
+        <pitem  name = "B5"  direction = "in"  />
+        <pitem  name = "B4"  direction = "in"  />
+        <pitem  name = "B3"  direction = "in"  />
+        <pitem  name = "B2"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "C17"  direction = "in"  />
+        <pitem  name = "C16"  direction = "in"  />
+        <pitem  name = "C15"  direction = "in"  />
+        <pitem  name = "C14"  direction = "in"  />
+        <pitem  name = "C13"  direction = "in"  />
+        <pitem  name = "C12"  direction = "in"  />
+        <pitem  name = "C11"  direction = "in"  />
+        <pitem  name = "C10"  direction = "in"  />
+        <pitem  name = "C9"  direction = "in"  />
+        <pitem  name = "C8"  direction = "in"  />
+        <pitem  name = "C7"  direction = "in"  />
+        <pitem  name = "C6"  direction = "in"  />
+        <pitem  name = "C5"  direction = "in"  />
+        <pitem  name = "C4"  direction = "in"  />
+        <pitem  name = "C3"  direction = "in"  />
+        <pitem  name = "C2"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "SIGNEDA"  direction = "in"  />
+        <pitem  name = "SIGNEDB"  direction = "in"  />
+        <pitem  name = "SOURCEA"  direction = "in"  />
+        <pitem  name = "SOURCEB"  direction = "in"  />
+        <pitem  name = "CE0"  direction = "in"  />
+        <pitem  name = "CE1"  direction = "in"  />
+        <pitem  name = "CE2"  direction = "in"  />
+        <pitem  name = "CE3"  direction = "in"  />
+        <pitem  name = "CLK0"  direction = "in"  />
+        <pitem  name = "CLK1"  direction = "in"  />
+        <pitem  name = "CLK2"  direction = "in"  />
+        <pitem  name = "CLK3"  direction = "in"  />
+        <pitem  name = "RST0"  direction = "in"  />
+        <pitem  name = "RST1"  direction = "in"  />
+        <pitem  name = "RST2"  direction = "in"  />
+        <pitem  name = "RST3"  direction = "in"  />
+        <pitem  name = "SRIA17"  direction = "in"  />
+        <pitem  name = "SRIA16"  direction = "in"  />
+        <pitem  name = "SRIA15"  direction = "in"  />
+        <pitem  name = "SRIA14"  direction = "in"  />
+        <pitem  name = "SRIA13"  direction = "in"  />
+        <pitem  name = "SRIA12"  direction = "in"  />
+        <pitem  name = "SRIA11"  direction = "in"  />
+        <pitem  name = "SRIA10"  direction = "in"  />
+        <pitem  name = "SRIA9"  direction = "in"  />
+        <pitem  name = "SRIA8"  direction = "in"  />
+        <pitem  name = "SRIA7"  direction = "in"  />
+        <pitem  name = "SRIA6"  direction = "in"  />
+        <pitem  name = "SRIA5"  direction = "in"  />
+        <pitem  name = "SRIA4"  direction = "in"  />
+        <pitem  name = "SRIA3"  direction = "in"  />
+        <pitem  name = "SRIA2"  direction = "in"  />
+        <pitem  name = "SRIA1"  direction = "in"  />
+        <pitem  name = "SRIA0"  direction = "in"  />
+        <pitem  name = "SRIB17"  direction = "in"  />
+        <pitem  name = "SRIB16"  direction = "in"  />
+        <pitem  name = "SRIB15"  direction = "in"  />
+        <pitem  name = "SRIB14"  direction = "in"  />
+        <pitem  name = "SRIB13"  direction = "in"  />
+        <pitem  name = "SRIB12"  direction = "in"  />
+        <pitem  name = "SRIB11"  direction = "in"  />
+        <pitem  name = "SRIB10"  direction = "in"  />
+        <pitem  name = "SRIB9"  direction = "in"  />
+        <pitem  name = "SRIB8"  direction = "in"  />
+        <pitem  name = "SRIB7"  direction = "in"  />
+        <pitem  name = "SRIB6"  direction = "in"  />
+        <pitem  name = "SRIB5"  direction = "in"  />
+        <pitem  name = "SRIB4"  direction = "in"  />
+        <pitem  name = "SRIB3"  direction = "in"  />
+        <pitem  name = "SRIB2"  direction = "in"  />
+        <pitem  name = "SRIB1"  direction = "in"  />
+        <pitem  name = "SRIB0"  direction = "in"  />
+        <pitem  name = "SROA17"  direction = "out"  />
+        <pitem  name = "SROA16"  direction = "out"  />
+        <pitem  name = "SROA15"  direction = "out"  />
+        <pitem  name = "SROA14"  direction = "out"  />
+        <pitem  name = "SROA13"  direction = "out"  />
+        <pitem  name = "SROA12"  direction = "out"  />
+        <pitem  name = "SROA11"  direction = "out"  />
+        <pitem  name = "SROA10"  direction = "out"  />
+        <pitem  name = "SROA9"  direction = "out"  />
+        <pitem  name = "SROA8"  direction = "out"  />
+        <pitem  name = "SROA7"  direction = "out"  />
+        <pitem  name = "SROA6"  direction = "out"  />
+        <pitem  name = "SROA5"  direction = "out"  />
+        <pitem  name = "SROA4"  direction = "out"  />
+        <pitem  name = "SROA3"  direction = "out"  />
+        <pitem  name = "SROA2"  direction = "out"  />
+        <pitem  name = "SROA1"  direction = "out"  />
+        <pitem  name = "SROA0"  direction = "out"  />
+        <pitem  name = "SROB17"  direction = "out"  />
+        <pitem  name = "SROB16"  direction = "out"  />
+        <pitem  name = "SROB15"  direction = "out"  />
+        <pitem  name = "SROB14"  direction = "out"  />
+        <pitem  name = "SROB13"  direction = "out"  />
+        <pitem  name = "SROB12"  direction = "out"  />
+        <pitem  name = "SROB11"  direction = "out"  />
+        <pitem  name = "SROB10"  direction = "out"  />
+        <pitem  name = "SROB9"  direction = "out"  />
+        <pitem  name = "SROB8"  direction = "out"  />
+        <pitem  name = "SROB7"  direction = "out"  />
+        <pitem  name = "SROB6"  direction = "out"  />
+        <pitem  name = "SROB5"  direction = "out"  />
+        <pitem  name = "SROB4"  direction = "out"  />
+        <pitem  name = "SROB3"  direction = "out"  />
+        <pitem  name = "SROB2"  direction = "out"  />
+        <pitem  name = "SROB1"  direction = "out"  />
+        <pitem  name = "SROB0"  direction = "out"  />
+        <pitem  name = "ROA17"  direction = "out"  />
+        <pitem  name = "ROA16"  direction = "out"  />
+        <pitem  name = "ROA15"  direction = "out"  />
+        <pitem  name = "ROA14"  direction = "out"  />
+        <pitem  name = "ROA13"  direction = "out"  />
+        <pitem  name = "ROA12"  direction = "out"  />
+        <pitem  name = "ROA11"  direction = "out"  />
+        <pitem  name = "ROA10"  direction = "out"  />
+        <pitem  name = "ROA9"  direction = "out"  />
+        <pitem  name = "ROA8"  direction = "out"  />
+        <pitem  name = "ROA7"  direction = "out"  />
+        <pitem  name = "ROA6"  direction = "out"  />
+        <pitem  name = "ROA5"  direction = "out"  />
+        <pitem  name = "ROA4"  direction = "out"  />
+        <pitem  name = "ROA3"  direction = "out"  />
+        <pitem  name = "ROA2"  direction = "out"  />
+        <pitem  name = "ROA1"  direction = "out"  />
+        <pitem  name = "ROA0"  direction = "out"  />
+        <pitem  name = "ROB17"  direction = "out"  />
+        <pitem  name = "ROB16"  direction = "out"  />
+        <pitem  name = "ROB15"  direction = "out"  />
+        <pitem  name = "ROB14"  direction = "out"  />
+        <pitem  name = "ROB13"  direction = "out"  />
+        <pitem  name = "ROB12"  direction = "out"  />
+        <pitem  name = "ROB11"  direction = "out"  />
+        <pitem  name = "ROB10"  direction = "out"  />
+        <pitem  name = "ROB9"  direction = "out"  />
+        <pitem  name = "ROB8"  direction = "out"  />
+        <pitem  name = "ROB7"  direction = "out"  />
+        <pitem  name = "ROB6"  direction = "out"  />
+        <pitem  name = "ROB5"  direction = "out"  />
+        <pitem  name = "ROB4"  direction = "out"  />
+        <pitem  name = "ROB3"  direction = "out"  />
+        <pitem  name = "ROB2"  direction = "out"  />
+        <pitem  name = "ROB1"  direction = "out"  />
+        <pitem  name = "ROB0"  direction = "out"  />
+        <pitem  name = "P35"  direction = "out"  />
+        <pitem  name = "P34"  direction = "out"  />
+        <pitem  name = "P33"  direction = "out"  />
+        <pitem  name = "P32"  direction = "out"  />
+        <pitem  name = "P31"  direction = "out"  />
+        <pitem  name = "P30"  direction = "out"  />
+        <pitem  name = "P29"  direction = "out"  />
+        <pitem  name = "P28"  direction = "out"  />
+        <pitem  name = "P27"  direction = "out"  />
+        <pitem  name = "P26"  direction = "out"  />
+        <pitem  name = "P25"  direction = "out"  />
+        <pitem  name = "P24"  direction = "out"  />
+        <pitem  name = "P23"  direction = "out"  />
+        <pitem  name = "P22"  direction = "out"  />
+        <pitem  name = "P21"  direction = "out"  />
+        <pitem  name = "P20"  direction = "out"  />
+        <pitem  name = "P19"  direction = "out"  />
+        <pitem  name = "P18"  direction = "out"  />
+        <pitem  name = "P17"  direction = "out"  />
+        <pitem  name = "P16"  direction = "out"  />
+        <pitem  name = "P15"  direction = "out"  />
+        <pitem  name = "P14"  direction = "out"  />
+        <pitem  name = "P13"  direction = "out"  />
+        <pitem  name = "P12"  direction = "out"  />
+        <pitem  name = "P11"  direction = "out"  />
+        <pitem  name = "P10"  direction = "out"  />
+        <pitem  name = "P9"  direction = "out"  />
+        <pitem  name = "P8"  direction = "out"  />
+        <pitem  name = "P7"  direction = "out"  />
+        <pitem  name = "P6"  direction = "out"  />
+        <pitem  name = "P5"  direction = "out"  />
+        <pitem  name = "P4"  direction = "out"  />
+        <pitem  name = "P3"  direction = "out"  />
+        <pitem  name = "P2"  direction = "out"  />
+        <pitem  name = "P1"  direction = "out"  />
+        <pitem  name = "P0"  direction = "out"  />
+        <pitem  name = "SIGNEDP"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "BA[17]"  />
+        <nitem  name = "BA[16]"  />
+        <nitem  name = "BA[15]"  />
+        <nitem  name = "BA[14]"  />
+        <nitem  name = "BA[13]"  />
+        <nitem  name = "BA[12]"  />
+        <nitem  name = "BA[11]"  />
+        <nitem  name = "BA[10]"  />
+        <nitem  name = "BA[9]"  />
+        <nitem  name = "BA[8]"  />
+        <nitem  name = "BA[7]"  />
+        <nitem  name = "BA[6]"  />
+        <nitem  name = "BA[5]"  />
+        <nitem  name = "BA[4]"  />
+        <nitem  name = "BA[3]"  />
+        <nitem  name = "BA[2]"  />
+        <nitem  name = "BA[1]"  />
+        <nitem  name = "BA[0]"  />
+        <nitem  name = "BB[17]"  />
+        <nitem  name = "BB[16]"  />
+        <nitem  name = "BB[15]"  />
+        <nitem  name = "BB[14]"  />
+        <nitem  name = "BB[13]"  />
+        <nitem  name = "BB[12]"  />
+        <nitem  name = "BB[11]"  />
+        <nitem  name = "BB[10]"  />
+        <nitem  name = "BB[9]"  />
+        <nitem  name = "BB[8]"  />
+        <nitem  name = "BB[7]"  />
+        <nitem  name = "BB[6]"  />
+        <nitem  name = "BB[5]"  />
+        <nitem  name = "BB[4]"  />
+        <nitem  name = "BB[3]"  />
+        <nitem  name = "BB[2]"  />
+        <nitem  name = "BB[1]"  />
+        <nitem  name = "BB[0]"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "CE0"  />
+        <nitem  name = "CLK0"  />
+        <nitem  name = "RST0"  />
+        <nitem  name = "SROA[17]"  />
+        <nitem  name = "SROA[16]"  />
+        <nitem  name = "SROA[15]"  />
+        <nitem  name = "SROA[14]"  />
+        <nitem  name = "SROA[13]"  />
+        <nitem  name = "SROA[12]"  />
+        <nitem  name = "SROA[11]"  />
+        <nitem  name = "SROA[10]"  />
+        <nitem  name = "SROA[9]"  />
+        <nitem  name = "SROA[8]"  />
+        <nitem  name = "SROA[7]"  />
+        <nitem  name = "SROA[6]"  />
+        <nitem  name = "SROA[5]"  />
+        <nitem  name = "SROA[4]"  />
+        <nitem  name = "SROA[3]"  />
+        <nitem  name = "SROA[2]"  />
+        <nitem  name = "SROA[1]"  />
+        <nitem  name = "SROA[0]"  />
+        <nitem  name = "SROB[17]"  />
+        <nitem  name = "SROB[16]"  />
+        <nitem  name = "SROB[15]"  />
+        <nitem  name = "SROB[14]"  />
+        <nitem  name = "SROB[13]"  />
+        <nitem  name = "SROB[12]"  />
+        <nitem  name = "SROB[11]"  />
+        <nitem  name = "SROB[10]"  />
+        <nitem  name = "SROB[9]"  />
+        <nitem  name = "SROB[8]"  />
+        <nitem  name = "SROB[7]"  />
+        <nitem  name = "SROB[6]"  />
+        <nitem  name = "SROB[5]"  />
+        <nitem  name = "SROB[4]"  />
+        <nitem  name = "SROB[3]"  />
+        <nitem  name = "SROB[2]"  />
+        <nitem  name = "SROB[1]"  />
+        <nitem  name = "SROB[0]"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_roa_1_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_rob_1_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_35"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_34"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_33"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_32"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_31"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_30"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_29"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_28"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_27"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_26"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_25"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_24"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_23"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_22"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_21"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_20"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_19"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_18"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_17"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_16"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_15"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_14"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_13"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_12"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_11"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_10"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_9"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_8"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_7"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_6"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_5"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_4"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_3"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_2"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_1"  />
+        <nitem  name = "Dummy_slice_0_mult_out_p_1_0"  />
+        <nitem  name = "Dummy_slice_0_mult_out_signedp_1"  />
+        </nets>
+    </instance>
+
+    <!--
+        Views in design "Dummy_slice": 0
+    -->
+
+    <views>
+    </views>
+
+</unit>
+
+</library>
+
+</top>

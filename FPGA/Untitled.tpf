@@ -1,0 +1,63 @@
+FREQUENCY NET "clk_1x" 25.000000 MHz ;
+FREQUENCY NET "clk_5x" 125.000000 MHz ;
+FREQUENCY NET "rx1_clk_10x" 250.000000 MHz ;
+FREQUENCY NET "clk_DSP" 200.000000 MHz ;
+FREQUENCY NET "tx_clk_5x" 125.000000 MHz ;
+FREQUENCY NET "rx2_clk_10x" 250.000000 MHz ;
+PERIOD NET "fifo_rx1_clk_5x" 8.000000 ns HIGH 4.000000 ns  ;
+PERIOD NET "fifo_rx2_clk_5x" 8.000000 ns HIGH 4.000000 ns  ;
+PERIOD NET "XTAL_20MHz_i" 50.000000 ns HIGH 25.000000 ns  ;
+PERIOD NET "SED_machine/sed_clkout" 100.000000 ns HIGH 50.000000 ns  ;
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+BLOCK JTAGPATHS ;
+BLOCK INTERCLOCKDOMAIN PATHS ;
+DEFINE PORT GROUP "EMIF_address" "CPU_io[38]" 
+"CPU_io[39]" 
+"CPU_io[40]" 
+"CPU_io[41]" 
+"CPU_io[44]" 
+"CPU_io[45]" 
+"CPU_io[46]" 
+"CPU_io[47]" 
+"CPU_io[48]" 
+"CPU_io[49]" 
+"CPU_io[50]" 
+"CPU_io[51]" ;
+DEFINE PORT GROUP "EMIF_data" "CPU_io[85]" 
+"CPU_io[83]" 
+"CPU_io[82]" 
+"CPU_io[81]" 
+"CPU_io[80]" 
+"CPU_io[79]" 
+"CPU_io[78]" 
+"CPU_io[77]" 
+"CPU_io[76]" 
+"CPU_io[75]" 
+"CPU_io[74]" 
+"CPU_io[73]" 
+"CPU_io[72]" 
+"CPU_io[71]" 
+"CPU_io[70]" 
+"CPU_io[69]" 
+"CPU_io[68]" 
+"CPU_io[67]" 
+"CPU_io[66]" 
+"CPU_io[65]" 
+"CPU_io[64]" 
+"CPU_io[63]" 
+"CPU_io[62]" 
+"CPU_io[61]" 
+"CPU_io[60]" 
+"CPU_io[59]" 
+"CPU_io[58]" 
+"CPU_io[57]" 
+"CPU_io[56]" 
+"CPU_io[55]" 
+"CPU_io[54]" 
+"CPU_io[53]" ;
+INPUT_SETUP GROUP "EMIF_address"5.000000 ns HOLD 15.000000 ns CLKNET "EMIF_oe_i" ;
+INPUT_SETUP GROUP "EMIF_address"10.000000 ns HOLD 5.000000 ns CLKNET "EMIF_we_i" ;
+INPUT_SETUP GROUP "EMIF_data"10.000000 ns HOLD 5.000000 ns CLKNET "EMIF_we_i" ;
+CLOCK_TO_OUT GROUP "EMIF_data" 20.000000 ns CLKNET "EMIF_oe_i" ;
+MAXDELAY FROM GROUP "EMIF_address" TO GROUP "EMIF_data" 15.000000 ns ;

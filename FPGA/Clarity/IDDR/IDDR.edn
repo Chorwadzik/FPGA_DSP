@@ -1,0 +1,249 @@
+(edif IDDR
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2021 9 23 1 31 6)
+      (program "SCUBA" (version "Diamond (64-bit) 3.11.3.469"))))
+      (comment "C:\lscc\diamond\3.11_x64\ispfpga\bin\nt64\scuba.exe -w -n IDDR -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type iol -mode Receive -io_type LVCMOS33 -width 1 -freq_in 250 -gear 4 -del 128 -fdc C:/Users/MrTea/workspace_lattice/SerDes/Clarity/IDDR/IDDR.fdc ")
+  (library ORCLIB
+    (edifLevel 0)
+    (technology
+      (numberDefinition))
+    (cell IB
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port I
+            (direction INPUT))
+          (port O
+            (direction OUTPUT)))))
+    (cell DELAYG
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port A
+            (direction INPUT))
+          (port Z
+            (direction OUTPUT)))))
+    (cell IDDRX2F
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port D
+            (direction INPUT))
+          (port SCLK
+            (direction INPUT))
+          (port ECLK
+            (direction INPUT))
+          (port RST
+            (direction INPUT))
+          (port ALIGNWD
+            (direction INPUT))
+          (port Q3
+            (direction OUTPUT))
+          (port Q2
+            (direction OUTPUT))
+          (port Q1
+            (direction OUTPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell CLKDIVF
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port CLKI
+            (direction INPUT))
+          (port RST
+            (direction INPUT))
+          (port ALIGNWD
+            (direction INPUT))
+          (port CDIVX
+            (direction OUTPUT)))))
+    (cell ECLKSYNCB
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port ECLKI
+            (direction INPUT))
+          (port STOP
+            (direction INPUT))
+          (port ECLKO
+            (direction OUTPUT)))))
+    (cell gddr_sync
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port rst
+            (direction INPUT))
+          (port sync_clk
+            (direction INPUT))
+          (port start
+            (direction INPUT))
+          (port stop
+            (direction OUTPUT))
+          (port ddr_reset
+            (direction OUTPUT))
+          (port ready
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (net ready
+            (joined
+              (portRef ready)))
+          (net ddr_reset
+            (joined
+              (portRef ddr_reset)))
+          (net stop
+            (joined
+              (portRef stop)))
+          (net start
+            (joined
+              (portRef start)))
+          (net sync_clk
+            (joined
+              (portRef sync_clk)))
+          (net rst
+            (joined
+              (portRef rst))))))
+    (cell IDDR
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port alignwd
+            (direction INPUT))
+          (port clkin
+            (direction INPUT))
+          (port ready
+            (direction OUTPUT))
+          (port sclk
+            (direction OUTPUT))
+          (port start
+            (direction INPUT))
+          (port sync_clk
+            (direction INPUT))
+          (port sync_reset
+            (direction INPUT))
+          (port (array (rename datain "datain(0:0)") 1)
+            (direction INPUT))
+          (port (array (rename q "q(3:0)") 4)
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (instance Inst5_IB
+            (viewRef view1 
+              (cellRef IB))
+            (property IO_TYPE
+              (string "LVCMOS33")))
+          (instance Inst4_CLKDIVF
+            (viewRef view1 
+              (cellRef CLKDIVF))
+            (property DIV
+              (string "2.0")))
+          (instance Inst3_ECLKSYNCB
+            (viewRef view1 
+              (cellRef ECLKSYNCB)))
+          (instance Inst_gddr_sync
+            (viewRef view1 
+              (cellRef gddr_sync)))
+          (instance Inst2_IDDRX2F0
+            (viewRef view1 
+              (cellRef IDDRX2F)))
+          (instance udel_dataini0
+            (viewRef view1 
+              (cellRef DELAYG))
+            (property DEL_MODE
+              (string "ECLK_CENTERED")))
+          (instance Inst1_IB0
+            (viewRef view1 
+              (cellRef IB))
+            (property IO_TYPE
+              (string "LVCMOS33")))
+          (net stop
+            (joined
+              (portRef stop (instanceRef Inst_gddr_sync))
+              (portRef STOP (instanceRef Inst3_ECLKSYNCB))))
+          (net eclki
+            (joined
+              (portRef ECLKI (instanceRef Inst3_ECLKSYNCB))
+              (portRef O (instanceRef Inst5_IB))))
+          (net reset
+            (joined
+              (portRef RST (instanceRef Inst2_IDDRX2F0))
+              (portRef RST (instanceRef Inst4_CLKDIVF))
+              (portRef ddr_reset (instanceRef Inst_gddr_sync))))
+          (net eclko
+            (joined
+              (portRef ECLK (instanceRef Inst2_IDDRX2F0))
+              (portRef CLKI (instanceRef Inst4_CLKDIVF))
+              (portRef ECLKO (instanceRef Inst3_ECLKSYNCB))))
+          (net dataini_t0
+            (joined
+              (portRef Z (instanceRef udel_dataini0))
+              (portRef D (instanceRef Inst2_IDDRX2F0))))
+          (net buf_dataini0
+            (joined
+              (portRef O (instanceRef Inst1_IB0))
+              (portRef A (instanceRef udel_dataini0))))
+          (net q3
+            (joined
+              (portRef (member q 0))
+              (portRef Q3 (instanceRef Inst2_IDDRX2F0))))
+          (net q2
+            (joined
+              (portRef (member q 1))
+              (portRef Q2 (instanceRef Inst2_IDDRX2F0))))
+          (net q1
+            (joined
+              (portRef (member q 2))
+              (portRef Q1 (instanceRef Inst2_IDDRX2F0))))
+          (net q0
+            (joined
+              (portRef (member q 3))
+              (portRef Q0 (instanceRef Inst2_IDDRX2F0))))
+          (net datain0
+            (joined
+              (portRef (member datain 0))
+              (portRef I (instanceRef Inst1_IB0))))
+          (net sync_reset
+            (joined
+              (portRef sync_reset)
+              (portRef rst (instanceRef Inst_gddr_sync))))
+          (net sync_clk
+            (joined
+              (portRef sync_clk)
+              (portRef sync_clk (instanceRef Inst_gddr_sync))))
+          (net start
+            (joined
+              (portRef start)
+              (portRef start (instanceRef Inst_gddr_sync))))
+          (net sclk
+            (joined
+              (portRef sclk)
+              (portRef SCLK (instanceRef Inst2_IDDRX2F0))
+              (portRef CDIVX (instanceRef Inst4_CLKDIVF))))
+          (net ready
+            (joined
+              (portRef ready)
+              (portRef ready (instanceRef Inst_gddr_sync))))
+          (net clkin
+            (joined
+              (portRef clkin)
+              (portRef I (instanceRef Inst5_IB))))
+          (net alignwd
+            (joined
+              (portRef alignwd)
+              (portRef ALIGNWD (instanceRef Inst4_CLKDIVF))
+              (portRef ALIGNWD (instanceRef Inst2_IDDRX2F0))))))))
+  (design IDDR
+    (cellRef IDDR
+      (libraryRef ORCLIB)))
+)

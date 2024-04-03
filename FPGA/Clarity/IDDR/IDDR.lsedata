@@ -1,0 +1,1707 @@
+<top name = "IDDR"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "sync_clk"  type = "port" />
+    <clockitem name = "sclk"  type = "net" />
+    <clockitem name = "eclki"  type = "net" />
+    <clockitem name = "eclko"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 4
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "IDDR">
+
+    <!--
+        Top Level Pins: 12
+    -->
+
+    <pins>
+        <pitem  name = "alignwd"  direction = "in"  />
+        <pitem  name = "clkin"  direction = "in"  />
+        <pitem  name = "ready"  direction = "out"  />
+        <pitem  name = "sclk"  direction = "out"  />
+        <pitem  name = "start"  direction = "in"  />
+        <pitem  name = "sync_clk"  direction = "in"  />
+        <pitem  name = "sync_reset"  direction = "in"  />
+        <pitem  name = "datain[0]"  direction = "in"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 62
+    -->
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0_73"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_31"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_1__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "reset"  />
+        <nitem  name = "Inst_gddr_sync/ddr_reset_d"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst5_IB"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "I"  direction = "in"  />
+        <pitem  name = "O"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clkin"  />
+        <nitem  name = "eclki"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst4_CLKDIVF"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "CLKI"  direction = "in"  />
+        <pitem  name = "RST"  direction = "in"  />
+        <pitem  name = "ALIGNWD"  direction = "in"  />
+        <pitem  name = "CDIVX"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "eclko"  />
+        <nitem  name = "reset"  />
+        <nitem  name = "alignwd"  />
+        <nitem  name = "sclk"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst3_ECLKSYNCB"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "ECLKI"  direction = "in"  />
+        <pitem  name = "STOP"  direction = "in"  />
+        <pitem  name = "ECLKO"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "eclki"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "eclko"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst2_IDDRX2F0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SCLK"  direction = "in"  />
+        <pitem  name = "ECLK"  direction = "in"  />
+        <pitem  name = "RST"  direction = "in"  />
+        <pitem  name = "ALIGNWD"  direction = "in"  />
+        <pitem  name = "Q3"  direction = "out"  />
+        <pitem  name = "Q2"  direction = "out"  />
+        <pitem  name = "Q1"  direction = "out"  />
+        <pitem  name = "Q0"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dataini_t0"  />
+        <nitem  name = "sclk"  />
+        <nitem  name = "eclko"  />
+        <nitem  name = "reset"  />
+        <nitem  name = "alignwd"  />
+        <nitem  name = "q[3]"  />
+        <nitem  name = "q[2]"  />
+        <nitem  name = "q[1]"  />
+        <nitem  name = "q[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "udel_dataini0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "buf_dataini0"  />
+        <nitem  name = "dataini_t0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst1_IB0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "I"  direction = "in"  />
+        <pitem  name = "O"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "datain[0]"  />
+        <nitem  name = "buf_dataini0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_I_0_81"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/reset_flag"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_33"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt_3__I_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_31"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_33"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_30"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt_3__I_0_84"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_43"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_44"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt_3__I_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_43"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_44"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_42"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt_3__I_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_30"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_42"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_29"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/LessThan_12"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/n11"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/add_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/n42"  />
+        <nitem  name = "Inst_gddr_sync/n43"  />
+        <nitem  name = "Inst_gddr_sync/n44"  />
+        <nitem  name = "Inst_gddr_sync/n45"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/mux_14"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/n11"  />
+        <nitem  name = "Inst_gddr_sync/n42"  />
+        <nitem  name = "Inst_gddr_sync/n43"  />
+        <nitem  name = "Inst_gddr_sync/n44"  />
+        <nitem  name = "Inst_gddr_sync/n45"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt_3__I_0_78"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_29"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_25[0]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/rst_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sync_reset"  />
+        <nitem  name = "Inst_gddr_sync/rst_N_52"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/stop_assert_2__I_8"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "start"  />
+        <nitem  name = "Inst_gddr_sync/rst_N_52"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_50"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/stop_assert_2__I_0_82"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[0]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_53"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/stop_assert_2__I_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_50"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_53"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_49"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_I_0_83"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/reset_flag"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_55"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/stop_assert_2__I_6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_49"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_55"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_48"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/add_22"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[0]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_45[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_45[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_45[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/stop_assert_2__I_0_80"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/stop_assert[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[0]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_48"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_45[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_45[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_45[0]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_5[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_5[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_5[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0_75"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_37"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_0_76"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[0]"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_38"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_I_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_37"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_38"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_36"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_I_0_77"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_36"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_35"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0_79"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_40"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[0]"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_41"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_I_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_40"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_41"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_39"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_I_0_72"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_35"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_39"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_34"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "sync_reset"  />
+        <nitem  name = "sync_clk"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt_3__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/stop_assert"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "sync_reset"  />
+        <nitem  name = "sync_clk"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[0]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_5[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_5[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert_2__N_5[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_65"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "sync_reset"  />
+        <nitem  name = "sync_clk"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_34"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/stop_assert_2__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[2]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[1]"  />
+        <nitem  name = "Inst_gddr_sync/stop_assert[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_61"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/start_I_0_86"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "start"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_61"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_60"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/reset_flag_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/reset_flag"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_63"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_10"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_60"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag_N_63"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_59"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/equal_42"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/n128"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/i44"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/reset_flag"  />
+        <nitem  name = "Inst_gddr_sync/n128"  />
+        <nitem  name = "Inst_gddr_sync/n129"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/i45"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "start"  />
+        <nitem  name = "Inst_gddr_sync/n129"  />
+        <nitem  name = "Inst_gddr_sync/n130"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/mux_45"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/n130"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_56[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_56[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_56[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_59"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_56[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_56[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_56[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_13[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_13[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_13[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt_3__I_0_85"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_67"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/mux_49"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/reset_flag"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_64[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_64[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_64[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_11"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_67"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_64[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_64[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_64[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_16[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_16[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_16[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ctrl_cnt_3__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[3]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[2]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[1]"  />
+        <nitem  name = "Inst_gddr_sync/ctrl_cnt[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_68"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_12"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_68"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_19[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_19[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_19[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/start_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "start"  />
+        <nitem  name = "Inst_gddr_sync/start_N_70"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "Inst_gddr_sync/start_N_70"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_22[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_22[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_22[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0_68"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_8"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0_69"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_9"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0_70"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_10"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync_2__I_0_71"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "Inst_gddr_sync/pwr"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_11"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__N_8_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_8"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_9"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_10"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_11"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_12"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ns_gddr_sync_2__I_0_74"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "data[2]"  direction = "in"  />
+        <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[0]"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        <pitem  name = "data[14]"  direction = "in"  />
+        <pitem  name = "data[13]"  direction = "in"  />
+        <pitem  name = "data[12]"  direction = "in"  />
+        <pitem  name = "data[11]"  direction = "in"  />
+        <pitem  name = "data[10]"  direction = "in"  />
+        <pitem  name = "data[9]"  direction = "in"  />
+        <pitem  name = "data[8]"  direction = "in"  />
+        <pitem  name = "data[7]"  direction = "in"  />
+        <pitem  name = "data[6]"  direction = "in"  />
+        <pitem  name = "data[5]"  direction = "in"  />
+        <pitem  name = "data[4]"  direction = "in"  />
+        <pitem  name = "data[3]"  direction = "in"  />
+        <pitem  name = "sel[4]"  direction = "in"  />
+        <pitem  name = "sel[3]"  direction = "in"  />
+        <pitem  name = "sel[2]"  direction = "in"  />
+        <pitem  name = "sel[1]"  direction = "in"  />
+        <pitem  name = "sel[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_13[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_13[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_13[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_16[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_16[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_16[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_19[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_19[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_19[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_22[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_22[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_22[0]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_8"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_9"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_10"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_11"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync_2__N_12"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/cs_gddr_sync"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "sync_reset"  />
+        <nitem  name = "sync_clk"  />
+        <nitem  name = "ready"  />
+        <nitem  name = "Inst_gddr_sync/cs_gddr_sync[1]"  />
+        <nitem  name = "stop"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[2]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[1]"  />
+        <nitem  name = "Inst_gddr_sync/ns_gddr_sync[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/ddr_reset_d_67"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Inst_gddr_sync/n182"  />
+        <nitem  name = "sync_reset"  />
+        <nitem  name = "sync_clk"  />
+        <nitem  name = "Inst_gddr_sync/ddr_reset_d"  />
+        <nitem  name = "Inst_gddr_sync/gnd"  />
+        </nets>
+    </instance>
+
+    <instance  name = "Inst_gddr_sync/Inst_gddr_sync"  />
+    <!--
+        REG instances in netlist: 5
+    -->
+
+    <regs>
+        <reg  name = "Inst_gddr_sync/ctrl_cnt"  />
+        <reg  name = "Inst_gddr_sync/stop_assert"  />
+        <reg  name = "Inst_gddr_sync/reset_flag_65"  />
+        <reg  name = "Inst_gddr_sync/cs_gddr_sync"  />
+        <reg  name = "Inst_gddr_sync/ddr_reset_d_67"  />
+    </regs>
+
+    <!--
+        Views in design "IDDR": 0
+    -->
+
+    <views>
+    </views>
+
+</unit>
+
+</library>
+
+</top>

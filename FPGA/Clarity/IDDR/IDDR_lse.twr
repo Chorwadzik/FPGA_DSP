@@ -1,0 +1,179 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Thu Sep 23 01:29:26 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     IDDR
+Constraint file: IDDR_temp_lse.sdc 
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk500 [get_nets sync_clk]
+            134 items scored, 53 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.081ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \Inst_gddr_sync/ctrl_cnt__i3  (from sync_clk +)
+   Destination:    FD1P3DX    SP             \Inst_gddr_sync/ctrl_cnt__i3  (to sync_clk -)
+
+   Delay:                   6.160ns  (14.0% logic, 86.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.160ns data_path \Inst_gddr_sync/ctrl_cnt__i3 to \Inst_gddr_sync/ctrl_cnt__i3 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 1.081ns
+
+ Path Details: \Inst_gddr_sync/ctrl_cnt__i3 to \Inst_gddr_sync/ctrl_cnt__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \Inst_gddr_sync/ctrl_cnt__i3 (from sync_clk)
+Route         6   e 1.478                                  \Inst_gddr_sync/ctrl_cnt[3]
+LUT4        ---     0.166              C to Z              \Inst_gddr_sync/i2_3_lut_rep_6_4_lut
+Route         3   e 1.239                                  \Inst_gddr_sync/n408
+LUT4        ---     0.166              B to Z              \Inst_gddr_sync/i108_4_lut
+Route         5   e 1.341                                  \Inst_gddr_sync/n147
+LUT4        ---     0.166              B to Z              \Inst_gddr_sync/i336_2_lut_rep_5
+Route         3   e 1.239                                  \Inst_gddr_sync/sync_clk_enable_4
+                  --------
+                    6.160  (14.0% logic, 86.0% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 1.081ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \Inst_gddr_sync/ctrl_cnt__i3  (from sync_clk +)
+   Destination:    FD1P3DX    SP             \Inst_gddr_sync/ctrl_cnt__i1  (to sync_clk -)
+
+   Delay:                   6.160ns  (14.0% logic, 86.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.160ns data_path \Inst_gddr_sync/ctrl_cnt__i3 to \Inst_gddr_sync/ctrl_cnt__i1 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 1.081ns
+
+ Path Details: \Inst_gddr_sync/ctrl_cnt__i3 to \Inst_gddr_sync/ctrl_cnt__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \Inst_gddr_sync/ctrl_cnt__i3 (from sync_clk)
+Route         6   e 1.478                                  \Inst_gddr_sync/ctrl_cnt[3]
+LUT4        ---     0.166              C to Z              \Inst_gddr_sync/i2_3_lut_rep_6_4_lut
+Route         3   e 1.239                                  \Inst_gddr_sync/n408
+LUT4        ---     0.166              B to Z              \Inst_gddr_sync/i108_4_lut
+Route         5   e 1.341                                  \Inst_gddr_sync/n147
+LUT4        ---     0.166              B to Z              \Inst_gddr_sync/i336_2_lut_rep_5
+Route         3   e 1.239                                  \Inst_gddr_sync/sync_clk_enable_4
+                  --------
+                    6.160  (14.0% logic, 86.0% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 1.081ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \Inst_gddr_sync/ctrl_cnt__i3  (from sync_clk +)
+   Destination:    FD1P3DX    SP             \Inst_gddr_sync/ctrl_cnt__i2  (to sync_clk -)
+
+   Delay:                   6.160ns  (14.0% logic, 86.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.160ns data_path \Inst_gddr_sync/ctrl_cnt__i3 to \Inst_gddr_sync/ctrl_cnt__i2 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 1.081ns
+
+ Path Details: \Inst_gddr_sync/ctrl_cnt__i3 to \Inst_gddr_sync/ctrl_cnt__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \Inst_gddr_sync/ctrl_cnt__i3 (from sync_clk)
+Route         6   e 1.478                                  \Inst_gddr_sync/ctrl_cnt[3]
+LUT4        ---     0.166              C to Z              \Inst_gddr_sync/i2_3_lut_rep_6_4_lut
+Route         3   e 1.239                                  \Inst_gddr_sync/n408
+LUT4        ---     0.166              B to Z              \Inst_gddr_sync/i108_4_lut
+Route         5   e 1.341                                  \Inst_gddr_sync/n147
+LUT4        ---     0.166              B to Z              \Inst_gddr_sync/i336_2_lut_rep_5
+Route         3   e 1.239                                  \Inst_gddr_sync/sync_clk_enable_4
+                  --------
+                    6.160  (14.0% logic, 86.0% route), 4 logic levels.
+
+Warning: 6.081 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk500 [get_nets sync_clk]              |     5.000 ns|     6.081 ns|     4 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\Inst_gddr_sync/n147                    |       5|      42|     79.25%
+                                        |        |        |
+\Inst_gddr_sync/n408                    |       3|      28|     52.83%
+                                        |        |        |
+\Inst_gddr_sync/sync_clk_enable_4       |       3|      18|     33.96%
+                                        |        |        |
+\Inst_gddr_sync/n209                    |       2|      14|     26.42%
+                                        |        |        |
+\Inst_gddr_sync/ctrl_cnt[0]             |       6|       9|     16.98%
+                                        |        |        |
+\Inst_gddr_sync/ctrl_cnt[1]             |       5|       9|     16.98%
+                                        |        |        |
+\Inst_gddr_sync/ctrl_cnt[3]             |       6|       8|     15.09%
+                                        |        |        |
+\Inst_gddr_sync/cs_gddr_sync[1]         |       8|       7|     13.21%
+                                        |        |        |
+\Inst_gddr_sync/ctrl_cnt[2]             |       5|       7|     13.21%
+                                        |        |        |
+\Inst_gddr_sync/n14                     |       1|       7|     13.21%
+                                        |        |        |
+\Inst_gddr_sync/n360                    |       1|       7|     13.21%
+                                        |        |        |
+stop                                    |       8|       7|     13.21%
+                                        |        |        |
+\Inst_gddr_sync/n12                     |       1|       6|     11.32%
+                                        |        |        |
+\Inst_gddr_sync/n224                    |       1|       6|     11.32%
+                                        |        |        |
+\Inst_gddr_sync/n227                    |       1|       6|     11.32%
+                                        |        |        |
+\Inst_gddr_sync/n229                    |       1|       6|     11.32%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 53  Score: 40148
+
+Constraints cover  134 paths, 41 nets, and 120 connections (91.6% coverage)
+
+
+Peak memory: 77447168 bytes, TRCE: 1392640 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

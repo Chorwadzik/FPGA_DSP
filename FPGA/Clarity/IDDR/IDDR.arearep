@@ -1,0 +1,31 @@
+----------------------------------------------------------------------
+Report for cell IDDR.TECH
+Register bits:  12 of 24879 (0.048%)
+I/O cells:      2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            CLKDIVF         1          100.0
+                             DELAYG         1          100.0
+                          ECLKSYNCB         1          100.0
+                            FD1P3DX         9          100.0
+                            FD1S3BX         1          100.0
+                            FD1S3DX         2          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                            IDDRX2F         1          100.0
+                               LUT4        29          100.0
+                              PFUMX         2          100.0
+SUB MODULES
+                      IDDRgddr_sync         1
+                              TOTAL        51
+----------------------------------------------------------------------
+Report for cell IDDRgddr_sync.v1
+Instance Path : Inst_gddr_sync
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         9          100.0
+                            FD1S3BX         1          100.0
+                            FD1S3DX         2          100.0
+                               LUT4        28           96.6
+                              PFUMX         2          100.0
+                              TOTAL        42
