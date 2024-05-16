@@ -241,69 +241,38 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 			
 		case(cnt[4:0])
 			0: begin
-				addrr_M0_ptr <= SM0_X1;
-											
-				CMemsel <= C_M0;
-								
-				CMuxsel <= CMUX_C_ALU;
 				
-				addrw_M0_ptr <= CM0_SUM;
-				Mem0_we <= 1'b1;
-				
-				addrr_M0_sel <= SEL_S_INC;
-				addrr_M1_sel <= SEL_S_INC;
-				addrw_M0_sel <= SEL_S_INC;
-				
-				harmonics_inc <= 1'b1;
-			end 
-//-------------------------------------------------
-			1: begin
-				addrr_M0_ptr <= SM0_X1;
-				addrr_M1_ptr <= SM1_SIN;
+				addrr_M0_ptr <= 3'b000;
 				
 				AAMemsel <= AA_M0L;
-				ABMemsel <= AB_M1H;
+				ABMemsel <= AB_M0H;
 				BAMemsel <= BA_M0H;
-				BBMemsel <= BB_M1H;
-								
+				BBMemsel <= BB_M0H;
+				
 				AMuxsel <= AMUX_MULTA;
 				BMuxsel <= BMUX_MULTB_L18;
 				
 				CE1 <= 1'b0;
+				
+				
+			end 
+			1: begin
+			
+				BAMemsel <= BA_M0H;
+				BBMemsel <= BB_RM0L;
+				
+				BMuxsel <= BMUX_MULTB;
+				CMuxsel <= CMUX_ALU_FB;
+				
+				addrw_M0_ptr <= 3'b001;				
+				Mem0_we <= 1'b1;
+				
 			end
 			2: begin
-				addrr_M0_ptr <= SM0_X2;
-				addrr_M1_ptr <= SM1_COS;
+								
+				addrr_M0_ptr <= 3'b010;
+				addrr_M1_ptr <= 3'b000;
 				
-				AAMemsel <= AA_M0H;
-				ABMemsel <= AB_M1L;
-				BAMemsel <= BA_M0H;
-				BBMemsel <= BB_RM1L;
-				
-				AMuxsel <= AMUX_MULTA;
-				BMuxsel <= BMUX_MULTB;
-				CMuxsel <= CMUX_ALU_FB;
-			end 
-			3: begin
-				addrr_M0_ptr <= SM0_X2;
-				addrr_M1_ptr <= SM1_COS;
-				
-				AAMemsel <= AA_M0L;
-				ABMemsel <= AB_M1H;
-				BAMemsel <= BA_M0H;
-				BBMemsel <= BB_M1H;
-				
-				AMuxsel <= AMUX_MULTA;
-				BMuxsel <= BMUX_MULTB_L18;
-				CMuxsel <= CMUX_ALU_FB;
-				
-				addrw_M0_ptr <= SM0_X2;
-				Mem0_we <= 1'b1;
-			end
-			4: begin
-				addrr_M0_ptr <= SM0_X2;
-				addrr_M1_ptr <= SM1_SIN;
-																
 				AAMemsel <= AA_M0L;
 				ABMemsel <= AB_M1H;
 				BAMemsel <= BA_M0H;
@@ -313,58 +282,29 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				BMuxsel <= BMUX_MULTB_L18;
 				
 				CE1 <= 1'b0;
-			end
-			5: begin
-				addrr_M0_ptr <= SM0_X1;
-				addrr_M1_ptr <= SM1_COS;
-
-				AAMemsel <= AA_M0H;
-				ABMemsel <= AB_M1L;
+			end 
+			3: begin
+				
 				BAMemsel <= BA_M0H;
 				BBMemsel <= BB_RM1L;
 				
-				AMuxsel <= AMUX_MULTA;
 				BMuxsel <= BMUX_MULTB;
 				CMuxsel <= CMUX_ALU_FB;
 				
-				Opcode <= OPCODE_SUM_A_NB_NC;
+				addrw_M0_ptr <= 3'b011;				
+				Mem0_we <= 1'b1;
+
+			end
+			4: begin
+			end
+			5: begin
 			end
 			6: begin
-				addrr_M0_ptr <= SM0_X1;
-				addrr_M1_ptr <= SM1_COS;
-				
-				AAMemsel <= AA_M0L;
-				ABMemsel <= AB_M1H;
-				BAMemsel <= BA_M0H;
-				BBMemsel <= BB_M1H;
-				
-				AMuxsel <= AMUX_MULTA;
-				BMuxsel <= BMUX_MULTB_L18;
-				CMuxsel <= CMUX_ALU_FB;
-								
-				addrw_M0_ptr <= SM0_X1;				
-				Mem0_we <= 1'b1;
 			end
 			7: begin
-				addrr_M0_ptr <= CM0_SUM;
-				
-				CMemsel <= C_M0;
-				
-				AMuxsel <= AMUX_ALU_FB;
-				CMuxsel <= CMUX_C_ALU;
-				
-				addrw_M0_ptr <= CM0_SUM;
-				Mem0_we <= 1'b1;
-				
-				addrr_M0_sel <= SEL_S_INC;
-				addrw_M0_sel <= SEL_S_INC;
-				addrr_M1_sel <= SEL_S_INC;
-
-				harmonics_inc <= 1'b1;
-				if(!harmonics_end) cnt <= 5'd1;
 			end
-//-------------------------------------------------
 			8: begin
+			/*
 				addrr_M1_ptr <= CM1_INP;
 				
 				CMemsel <= C_M1;
@@ -377,8 +317,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				addrr_M1_sel <= SEL_C_INC;
 				
 				harmonics_rst <= 1'b1;
+				*/
 			end
 			9: begin
+			/*
 				addrr_M0_ptr <= CM0_SUM;
 
 				CMuxsel <= CMUX_ALU_FB;
@@ -387,16 +329,20 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				
 				addrw_M0_ptr <= CM0_ERR;
 				Mem0_we <= 1'b1;
+				*/
 			end
 			10: begin
 			end
 			11: begin
+				/*
 				addrr_M0_sel <= SEL_S_RST;
 				addrr_M1_sel <= SEL_S_RST;
 				addrw_M0_sel <= SEL_S_RST;
+				*/
 			end
 //-------------------------------------------------
 			12: begin
+			/*
 				addrr_M0_ptr <= SM0_X1;
 				
 				AAMemsel <= AA_M0L;
@@ -408,8 +354,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				BMuxsel <= BMUX_MULTB_L18;
 				
 				CE1 <= 1'b0;
+				*/
 			end
 			13: begin
+			/*
 				addrr_M0_ptr <= SM0_X2;
 				
 				AAMemsel <= AA_M0H;
@@ -420,8 +368,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				AMuxsel <= AMUX_MULTA;
 				BMuxsel <= BMUX_MULTB;
 				CMuxsel <= CMUX_ALU_FB;
+				*/
 			end 
 			14: begin
+			/*
 				addrr_M0_ptr <= SM0_X2;
 				
 				AAMemsel <= AA_M0L;
@@ -435,8 +385,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				
 				addrw_M0_ptr <= SM0_A;
 				Mem0_we <= 1'b1;
+				*/
 			end
 			15: begin
+			/*
 				addrr_M0_ptr <= CM0_ERR;
 				addrr_M1_ptr <= SM1_K1;
 								
@@ -449,8 +401,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				BMuxsel <= BMUX_MULTB_L18;
 				
 				CE1 <= 1'b0;
+				*/
 			end
 			16: begin
+			/*
 				addrr_M0_ptr <= SM0_X1;
 				
 				BAMemsel <= BA_M0H;
@@ -463,8 +417,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 								
 				addrw_M0_ptr <= SM0_X1;
 				Mem0_we <= 1'b1;
+				*/
 			end
 			17: begin
+			/*
 				addrr_M0_ptr <= CM0_ERR;
 				addrr_M1_ptr <= SM1_K2;
 								
@@ -477,8 +433,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				BMuxsel <= BMUX_MULTB_L18;
 				
 				CE1 <= 1'b0;
+				*/
 			end
 			18: begin
+			/*
 				addrr_M0_ptr <= SM0_X2;
 				
 				BAMemsel <= BA_M0H;
@@ -498,9 +456,11 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				
 				harmonics_inc <= 1'b1;
 				if(!harmonics_end) cnt <= 5'd12;
+				*/
 			end
 //-------------------------------------------------
 			19: begin
+			/*
 				addrr_M0_sel <= SEL_S_RST;
 				addrr_M1_sel <= SEL_S_RST;
 				addrw_M0_sel <= SEL_S_RST;
@@ -508,13 +468,16 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				series_inc <= 1'b1;
 				harmonics_rst <= 1'b1;
 				if(!series_end) cnt <= 5'd0;
+				*/
 			end
 			20: begin
+			/*
 				addrr_M0_sel <= SEL_C_RST;
 				addrr_M1_sel <= SEL_C_RST;
 				addrw_M0_sel <= SEL_C_RST;
 				
 				series_rst <= 1'b1;
+				*/
 			end
 			21: begin
 			end
@@ -571,7 +534,7 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 		Mem1_data_r <= Mem1_data_o;
 	end
 	
-	Slice2 #(.QMATH_SHIFT(1)) Slice2(.CLK0(clk_i), .CE0(1'b1), .CE1(CE1_pip), .CE2(1'b0), .CE3(1'b0), .RST0(1'b0), .RST1(1'b0), .RST2(1'b0), .RST3(1'b0),
+	Slice2 #(.QMATH_SHIFT(2)) Slice2(.CLK0(clk_i), .CE0(1'b1), .CE1(CE1_pip), .CE2(1'b0), .CE3(1'b0), .RST0(1'b0), .RST1(1'b0), .RST2(1'b0), .RST3(1'b0),
 	.AA(DataAA[AAMemsel_pip]), .AB(DataAB[ABMemsel_pip]), .BA(DataBA[BAMemsel_pip]), .BB(DataBB[BBMemsel_pip]), .C(DataC_r),
 	.SignAA(AAMemsel_pip[0]), .SignAB(ABMemsel_pip[0]), .SignBA(BAMemsel_pip[0]), .SignBB(BBMemsel_pip[0]),
 	.AMuxsel(AMuxsel_pip), .BMuxsel(BMuxsel_pip), .CMuxsel(CMuxsel_pip), .Opcode(Opcode_pip),
