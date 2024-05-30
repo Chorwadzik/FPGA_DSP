@@ -1,5 +1,5 @@
-666666666 //cosine 0 harmonic [0.0] 
-600000000 //sine 0 harmonic [0.0] 
+200000000 //HALF 
+600000000 //ONE_HALF
 000EB529F //gain x1 0 harmonic [0.00044884] 
 000000000 //gain x2 0 harmonic [0.] 
 200000000//cosine 1 harmonic [0.9999494680510518] 

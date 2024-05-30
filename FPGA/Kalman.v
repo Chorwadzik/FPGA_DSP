@@ -58,6 +58,15 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	localparam OPCODE_OR_BC = 4'b0011; 
 	localparam OPCODE_NOR_BC = 4'b1011; 
 
+	localparam Yp = 3'b000;
+	localparam Ye_2 = 3'b001;
+	localparam Ypp = 3'b010;
+	localparam Yppp = 3'b011;
+	localparam M_U_grid = 3'b100;
+
+	localparam HALF = 3'b000;
+	localparam ONE_HALF = 3'b001;
+
 	localparam AMUX_WIDTH = 2;
 	localparam AMUX_ALU_FB = 2'b00; 
 	localparam AMUX_MULTA = 2'b01; 
@@ -80,14 +89,16 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	localparam CMUX_RND_PN = 3'b110; 
 	localparam CMUX_RND_PNM = 3'b111; 
 
-	localparam AAMEM_WIDTH = 1; 	
+	localparam AAMEM_WIDTH = 2; 	
 	localparam ABMEM_WIDTH = 3;
-	localparam BAMEM_WIDTH = 1;
+	localparam BAMEM_WIDTH = 2;
 	localparam BBMEM_WIDTH = 3;
 	localparam CMEM_WIDTH = 1; 
 	
-	localparam AA_M0L = 1'b0;
-	localparam AA_M0H = 1'b1;
+	localparam AA_M0L = 2'b00;
+	localparam AA_M0H = 2'b01;
+	localparam AA_RESULT_L = 2'b10;
+	localparam AA_RESULT_H = 2'b11;
 
 	localparam AB_M0L = 3'b000;
 	localparam AB_M0H = 3'b001;
@@ -96,8 +107,10 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	localparam AB_RM0L = 3'b100;
 	localparam AB_RM0H = 3'b101;
 		
-	localparam BA_M0L = 1'b0;
-	localparam BA_M0H = 1'b1;
+	localparam BA_M0L = 2'b00;
+	localparam BA_M0H = 2'b01;
+	localparam BA_RESULT_L = 2'b10;
+	localparam BA_RESULT_H = 2'b11;
 	
 	localparam BB_RM0L = 3'b000;
 	localparam BB_M0H = 3'b001;
@@ -248,7 +261,6 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 			
 		case(cnt[4:0])
 			0: begin
-				
 				addrr_M0_ptr <= 3'b000;
 				
 				AAMemsel <= AA_M0L;
@@ -260,8 +272,6 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				BMuxsel <= BMUX_MULTB_L18;
 				
 				CE1 <= 1'b0;
-				
-				
 			end 
 			1: begin
 			
@@ -271,13 +281,12 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				BMuxsel <= BMUX_MULTB;
 				CMuxsel <= CMUX_ALU_FB;
 				
-				addrw_M0_ptr <= 3'b111;				
+				addrw_M0_ptr <= 3'b001;				
 				Mem0_we <= 1'b1;
 				
 			end
-			2: begin
-								
-				addrr_M0_ptr <= 3'b000;
+			2: begin	
+				addrr_M0_ptr <= 3'b100;
 				addrr_M1_ptr <= 3'b000;
 				
 				AAMemsel <= AA_M0L;
@@ -291,39 +300,29 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				CE1 <= 1'b0;
 			end 
 			3: begin
-				addrr_M0_ptr <= 3'b000;
+				//addrr_M0_ptr <= 3'b000;
 				BAMemsel <= BA_M0H;
 				BBMemsel <= BB_RM1L;
 				
 				BMuxsel <= BMUX_MULTB;
 				CMuxsel <= CMUX_ALU_FB;
 				
-				addrw_M0_ptr <= 3'b011;				
-				Mem0_we <= 1'b1;
+				//addrw_M0_ptr <= 3'b011;				
+				//Mem0_we <= 1'b1;
 
 			end
 			4: begin
 
 			end
 			5: begin
-
+				addrr_M0_ptr <= 3'b001;
 			end
 			6: begin
-
-			end
-			7: begin
-
-			end
-			8: begin
-				addrr_M0_ptr <= 3'b001;
-				//RE1 <= 1'b0;
-			end
-			9: begin
 				addrr_M0_ptr <= 3'b000;
 				
-				AAMemsel <= AA_M0L;
+				AAMemsel <= AA_RESULT_L;
 				ABMemsel <= AB_RM0H;
-				BAMemsel <= BA_M0H;
+				BAMemsel <= BA_RESULT_H;
 				BBMemsel <= BB_RM0H;
 				
 				AMuxsel <= AMUX_MULTA;
@@ -331,11 +330,9 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				
 				CE1 <= 1'b0;
 				RE1 <= 1'b0;
-
 			end
-			10: begin
-				
-				BAMemsel <= BA_M0H;
+			7: begin
+				BAMemsel <= BA_RESULT_H;
 				BBMemsel <= BB_RM0L;
 				
 				BMuxsel <= BMUX_MULTB;
@@ -343,7 +340,16 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				
 				addrw_M0_ptr <= 3'b101;				
 				Mem0_we <= 1'b1;
-				//RE1 <= 1'b0;
+			end
+			8: begin
+
+			end
+			9: begin
+
+
+			end
+			10: begin
+
 				
 			end
 			11: begin
@@ -524,6 +530,8 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	wire [17:0] DataAA [2**AAMEM_WIDTH-1:0];
 	assign DataAA[0] = Mem0_data_o[17:0];
 	assign DataAA[1] = Mem0_data_o[35:18];
+	assign DataAA[2] = Mem0_data_i[17:0];
+	assign DataAA[3] = Mem0_data_i[35:18];
 	wire [17:0] DataAB [2**ABMEM_WIDTH-1:0];
 	assign DataAB[0] = Mem0_data_o[17:0];
 	assign DataAB[1] = Mem0_data_o[35:18];
@@ -534,6 +542,8 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	wire [17:0] DataBA [2**BAMEM_WIDTH-1:0];
 	assign DataBA[0] = Mem0_data_o[35:18];
 	assign DataBA[1] = Mem0_data_o[35:18];
+	assign DataBA[2] = Mem0_data_i[17:0];
+	assign DataBA[3] = Mem0_data_i[35:18];
 	wire [17:0] DataBB [2**BBMEM_WIDTH-1:0];
 	assign DataBB[0] = Mem0_data_r[17:0];
 	assign DataBB[1] = Mem0_data_o[35:18];	
