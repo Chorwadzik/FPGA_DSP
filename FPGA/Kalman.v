@@ -189,6 +189,9 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	wire RE1_pip;
 	
 	wire [M0_ADDR_WIDTH-1:0] Mem0_addrw_pip;
+	wire [M0_ADDR_WIDTH-1:0] Mem0_addrr_pip;
+	wire [M0_ADDR_WIDTH-1:0] Mem1_addrr_pip;
+
 	wire Mem0_we_pip;
 	
 	reg harmonics_inc;
@@ -281,13 +284,13 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 				BMuxsel <= BMUX_MULTB;
 				CMuxsel <= CMUX_ALU_FB;
 				
-				addrw_M0_ptr <= 3'b001;				
+				addrw_M0_ptr <= 3'b111;				
 				Mem0_we <= 1'b1;
 				
 			end
 			2: begin	
-				addrr_M0_ptr <= 3'b100;
-				addrr_M1_ptr <= 3'b000;
+				addrr_M0_ptr <= 3'b101;
+				addrr_M1_ptr <= 3'b111;
 				
 				AAMemsel <= AA_M0L;
 				ABMemsel <= AB_M1H;
@@ -584,7 +587,7 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	.pmi_gsr("enable"), .pmi_resetmode("sync"), .pmi_optimization("speed"), .pmi_family("ECP5U"),
 	.pmi_init_file("../Mem0.mem"), .pmi_init_file_format("hex")
 	)
-	Mem0(.Data(Mem0_data_i), .WrAddress(Mem0_addrw_pip), .RdAddress(addrr_M0_out), .WrClock(clk_i),
+	Mem0(.Data(Mem0_data_i), .WrAddress(Mem0_addrw_pip), .RdAddress(Mem0_addrr_pip), .WrClock(clk_i),
 	.RdClock(clk_i), .WrClockEn(1'b1), .RdClockEn(1'b1), .WE(Mem0_we_pip), .Reset(1'b0), 
 	.Q(Mem0_data_o));
 	
@@ -594,7 +597,7 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 		.pmi_gsr("enable"), .pmi_resetmode("sync"), .pmi_optimization("speed"), .pmi_family("ECP5U"),
 		.pmi_init_file("../Mem1_K.mem"), .pmi_init_file_format("hex")
 		)
-		Mem1(.Data({Mem1_data_i,{4{Mem1_data_i[31]}}}), .WrAddress(Mem1_addrw_i), .RdAddress(addrr_M1_out), .WrClock(Mem1_clk_w),
+		Mem1(.Data({Mem1_data_i,{4{Mem1_data_i[31]}}}), .WrAddress(Mem1_addrw_i), .RdAddress(Mem1_addrr_pip), .WrClock(Mem1_clk_w),
 		.RdClock(clk_i), .WrClockEn(Mem1_clk_en_w), .RdClockEn(1'b1), .WE(Mem1_we_i), .Reset(1'b0), 
 		.Q(Mem1_data_o));
 	else
@@ -602,7 +605,7 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 		.pmi_rd_addr_depth(M1_ADDR_NUM), .pmi_rd_addr_width(M1_ADDR_WIDTH), .pmi_rd_data_width(36), .pmi_regmode("reg"), 
 		.pmi_gsr("enable"), .pmi_resetmode("sync"), .pmi_optimization("speed"), .pmi_family("ECP5U")
 		)
-		Mem1(.Data({Mem1_data_i,{4{Mem1_data_i[31]}}}), .WrAddress(Mem1_addrw_i), .RdAddress(addrr_M1_out), .WrClock(Mem1_clk_w),
+		Mem1(.Data({Mem1_data_i,{4{Mem1_data_i[31]}}}), .WrAddress(Mem1_addrw_i), .RdAddress(Mem1_addrr_pip), .WrClock(Mem1_clk_w),
 		.RdClock(clk_i), .WrClockEn(Mem1_clk_en_w), .RdClockEn(1'b1), .WE(Mem1_we_i), .Reset(1'b0), 
 		.Q(Mem1_data_o));
 		
@@ -661,9 +664,16 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 	pipeline_delay #(.WIDTH(1),.CYCLES(8),.SHIFT_MEM(0)) 
 	we_delay (.clk(clk_i), .in(Mem0_we), .out(Mem0_we_pip));
 	
+	pipeline_delay #(.WIDTH(9),.CYCLES(3),.SHIFT_MEM(0)) 
+	addrr_M1_delay (.clk(clk_i), .in(addrr_M1_ptr), .out(Mem1_addrr_pip));
 	
-	pipeline_delay #(.WIDTH(9),.CYCLES(5),.SHIFT_MEM(0)) 
-	addrw_M0_delay (.clk(clk_i), .in(addrw_M0_out), .out(Mem0_addrw_pip));
+	pipeline_delay #(.WIDTH(9),.CYCLES(3),.SHIFT_MEM(0)) 
+	addrr_M0_delay (.clk(clk_i), .in(addrr_M0_ptr), .out(Mem0_addrr_pip));
+
+	pipeline_delay #(.WIDTH(9),.CYCLES(8),.SHIFT_MEM(0)) 
+	addrw_M0_delay (.clk(clk_i), .in(addrw_M0_ptr), .out(Mem0_addrw_pip));
+
+
 	
 	wire [4:0] cnt_pip2;
 	wire [SERIES_CNT_WIDTH-1:0] series_cnt_pip2;
@@ -739,15 +749,14 @@ module Kalman(clk_i, Mem1_data_i, Mem1_addrw_i, Mem1_we_i, Mem1_clk_w, Mem1_clk_
 		pipeline_delay #(.WIDTH(1),.CYCLES(8),.SHIFT_MEM(0)) 
 		we_delay2 (.clk(clk_i), .in(Mem0_we), .out(Mem0_we_pip2));
 		
+		pipeline_delay #(.WIDTH(9),.CYCLES(8),.SHIFT_MEM(0)) 
+		addrw_M0_delay2 (.clk(clk_i), .in(addrw_M0_ptr), .out(Mem0_addrw_pip2));
 		
 		pipeline_delay #(.WIDTH(9),.CYCLES(5),.SHIFT_MEM(0)) 
-		addrw_M0_delay2 (.clk(clk_i), .in(addrw_M0_out), .out(Mem0_addrw_pip2));
+		addrr_M0_delay2 (.clk(clk_i), .in(Mem0_addrr_pip), .out(addrr_M0_out_pip2));
 		
 		pipeline_delay #(.WIDTH(9),.CYCLES(5),.SHIFT_MEM(0)) 
-		addrr_M0_delay2 (.clk(clk_i), .in(addrr_M0_out), .out(addrr_M0_out_pip2));
-		
-		pipeline_delay #(.WIDTH(9),.CYCLES(5),.SHIFT_MEM(0)) 
-		addrr_M1_delay2 (.clk(clk_i), .in(addrr_M1_out), .out(addrr_M1_out_pip2));
+		addrr_M1_delay2 (.clk(clk_i), .in(Mem1_addrr_pip), .out(addrr_M1_out_pip2));
 		
 		pipeline_delay #(.WIDTH(36),.CYCLES(3),.SHIFT_MEM(0)) 
 		Mem0_data_o_delay2 (.clk(clk_i), .in(Mem0_data_o), .out(Mem0_data_o_pip2));
